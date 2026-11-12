@@ -47,11 +47,13 @@ class FakeCreateDataset:
 def run(app, tmp_path):
     """Queue an import directly and run it, as the host's worker would."""
 
-    def go(shards, *, size=4, fail_fetch=None, refuse=None, open_parquet=None, **fields):
+    def go(shards, *, size=4, fail_fetch=None, refuse=None, open_parquet=None, while_fetching=None, **fields):
         create = FakeCreateDataset(refuse)
 
         def fetch_shards(external_id, config, split, max_bytes, dest_dir):
             create.fetched_with = (external_id, config, split, max_bytes)
+            if while_fetching:
+                while_fetching(app.db.engine)
             if fail_fetch:
                 raise fail_fetch
             return imports.Fetched(paths=[str(p) for p in shards], revision="abc123")
@@ -67,12 +69,14 @@ def run(app, tmp_path):
             )
             session.add(record)
             session.commit()
+            ref = record.id
             imports.run_import(
-                record.id, session=session, fetch_shards=fetch_shards,
+                ref, session=session, fetch_shards=fetch_shards,
                 create_dataset=create, data_dir=str(tmp_path / "data"), seed=7, open_parquet=open_parquet,
             )
-            session.refresh(record)
-            return record.to_dict(), create
+            session.expunge_all()
+            found = session.get(LibraryImport, ref)
+            return (found.to_dict() if found else None), create
 
     return go
 
@@ -201,4 +205,36 @@ def test_a_dataset_changed_since_its_preview_is_not_imported_unseen(run, tmp_pat
     assert result["status"] == "failed"
     assert result["code"] == "changed"
     assert result["error"] == "This dataset changed on Hugging Face after you opened it. Open it again to import the new version."
+    assert create.calls == []
+
+
+def test_an_import_erased_while_it_runs_stops_without_making_a_dataset(run, tmp_path):
+    """Account deletion removes the user's import rows; a running import then just ends."""
+    import sqlalchemy as sa
+
+    shard = write_shard(tmp_path / "0000.parquet", ["A clause", "Another"], [0, 1])
+
+    def erase(engine):
+        with engine.begin() as connection:
+            connection.execute(sa.text("DELETE FROM library_imports"))
+
+    result, create = run([shard], size=2, while_fetching=erase)
+
+    assert result is None
+    assert create.calls == []
+    assert not list((tmp_path / "data").glob("library-*.csv"))
+
+
+def test_a_cancelled_import_is_not_finished_by_the_worker(run, tmp_path):
+    import sqlalchemy as sa
+
+    shard = write_shard(tmp_path / "0000.parquet", ["A clause", "Another"], [0, 1])
+
+    def cancel(engine):
+        with engine.begin() as connection:
+            connection.execute(sa.text("UPDATE library_imports SET status = 'cancelled'"))
+
+    result, create = run([shard], size=2, while_fetching=cancel)
+
+    assert result["status"] == "cancelled"
     assert create.calls == []

@@ -18,6 +18,9 @@ import shutil
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
 
+from sqlalchemy.exc import InvalidRequestError
+from sqlalchemy.orm.exc import ObjectDeletedError
+
 from .errors import ProviderError
 from .models import LibraryImport
 
@@ -180,7 +183,11 @@ def run_import(
 
 
 def _check(session, record):
-    session.refresh(record)
+    """Stop when the import ended elsewhere, or its row is gone (account deletion)."""
+    try:
+        session.refresh(record)
+    except (ObjectDeletedError, InvalidRequestError):
+        raise _Stopped()
     if record.status in TERMINAL:
         raise _Stopped()
 
@@ -197,8 +204,9 @@ def _advance(session, record, state, updates=None):
 
 def _fail(session, record, code, message):
     session.rollback()
-    session.refresh(record)
-    if record.status in TERMINAL:
+    try:
+        _check(session, record)
+    except _Stopped:
         return
     record.status, record.error_code, record.error_message = FAILED, code, message
     session.commit()
