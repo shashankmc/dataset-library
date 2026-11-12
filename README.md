@@ -61,9 +61,9 @@ label `dataset_library`).
   `importable` and `maxRows`.
 
 - `POST /api/library/imports` with `{"dataset", "config", "split", "textColumn",
-  "labelColumn", "size", "taskType"?, "licenseAck"?}` → 202 and the import,
+  "labelColumn", "size", "name"?, "taskType"?, "licenseAck"?}` → 202 and the import,
   `queued`. The size is cut to `max_rows()`. Refused before anything is queued:
-  400 (`bad_id`, `bad_mapping`, `bad_size`, `bad_task`, `bad_config`), 404, 409
+  400 (`bad_id`, `bad_mapping`, `bad_size`, `bad_name`, `bad_task`, `bad_config`), 404, 409
   (`gated`, `not_importable`, `needs_ack` for a license set to warn), and 503
   when the queue is down (the import is stored as failed).
 - `GET /api/library/imports` and `GET /api/library/imports/<ref>` → the

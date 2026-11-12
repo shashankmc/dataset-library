@@ -75,6 +75,10 @@ def start(host, owner_id, body):
     task_type = body.get("taskType") or "classification"
     if task_type not in host.task_types:
         raise Refused(400, "bad_task", f"Unknown task type: {task_type}")
+    name = body.get("name")
+    name = name.strip() if isinstance(name, str) else ""
+    if len(name) > 255:
+        raise Refused(400, "bad_name", "Keep the name under 256 characters.")
     size = body.get("size")
     if isinstance(size, bool) or not isinstance(size, int) or size < 1:
         raise Refused(400, "bad_size", "Say how many rows to import, as a whole number above 0.")
@@ -106,7 +110,7 @@ def start(host, owner_id, body):
         license=dataset["license"]["id"], license_ack_at=_now() if body.get("licenseAck") is True else None,
         text_column=text_column, label_column=label_column, task_type=task_type,
         sample_size=min(size, cap), max_rows=cap,
-        name=dataset["title"] if not earlier else f"{dataset['title']} ({earlier + 1})",
+        name=name or (dataset["title"] if not earlier else f"{dataset['title']} ({earlier + 1})"),
         status=QUEUED,
     )
     session.add(record)

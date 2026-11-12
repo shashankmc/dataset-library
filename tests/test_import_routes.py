@@ -110,3 +110,9 @@ def test_without_a_queue_the_host_offers_no_import(make_app):
 
     assert client.post("/api/library/imports", json=LEXGLUE, headers=ALICE).status_code == 404
     assert client.get("/api/library/options", headers=ALICE).get_json()["importable"] is False
+
+
+def test_the_student_may_name_the_dataset(client):
+    assert start(client, name="  Contract clauses  ")["name"] == "Contract clauses"
+    assert start(client, name="")["name"] == "LexGLUE (2)"
+    assert start(client, status=400, name="x" * 256)["code"] == "bad_name"
