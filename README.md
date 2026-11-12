@@ -19,6 +19,8 @@ init_dataset_library(
     current_owner=get_jwt_identity,
     task_types=[t["value"] for t in TASK_TYPES],  # legal-ml-core's task types
     cache=RedisJSONCache(redis),    # get(key) / set(key, value, ttl)
+    is_admin=lambda: "baigle-admin" in roles(),   # who may change the settings
+    audit=lambda event, **fields: log(event, fields),
 )
 ```
 
@@ -39,6 +41,10 @@ label `dataset_library`).
   `rowCount` (the split's size, when known) and `preview: "ok" | "unavailable"`.
 - `GET /api/library/options` → the task, license and source filters, and the
   license table (`level` is this platform's: `allow`, `warn` or `hide`).
+
+- Admins only (`is_admin()`): `GET` / `PUT /api/library/admin/settings` (sources
+  and license levels, saved whole; 400 with `fields` when anything is invalid)
+  and `POST /api/library/admin/sources/check` (`{"ref"}` → `{"ok", "error"?}`).
 
 ## Licenses
 

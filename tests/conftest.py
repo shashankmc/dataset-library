@@ -119,7 +119,12 @@ def cache():
 
 
 @pytest.fixture
-def make_app(cache, hub):
+def audits():
+    return []
+
+
+@pytest.fixture
+def make_app(cache, hub, audits):
     def make(**options):
         app = Flask(__name__)
         app.config.update({"TESTING": True, "SQLALCHEMY_DATABASE_URI": "sqlite:///:memory:", **options.pop("config", {})})
@@ -132,6 +137,8 @@ def make_app(cache, hub):
             current_owner=lambda: g.user,
             task_types=TASK_TYPES,
             cache=cache,
+            is_admin=lambda: request.headers.get("X-Admin") == "yes",
+            audit=lambda event, **fields: audits.append({"event": event, **fields}),
             **options,
         )
         with app.app_context():
@@ -153,3 +160,4 @@ def client(app):
 
 
 ALICE = {"X-User": "alice"}
+ADMIN = {"X-User": "ada", "X-Admin": "yes"}

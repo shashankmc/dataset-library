@@ -44,6 +44,15 @@ def search(query, task, license_id, authors, task_types):
     return [_card(record, task_types) for record in records if not record.get("private") and not record.get("disabled")]
 
 
+# A source: one organisation's name.
+ORGANISATION_PATTERN = re.compile(r"^(?!\.)[\w.-]{1,96}$")
+
+
+def organisation_has_datasets(name):
+    """Whether the Hub lists any public dataset from this organisation."""
+    return bool(_get_with_retry({"author": name, "limit": 1}))
+
+
 def dataset(external_id, task_types):
     """One dataset's card, or None when the Hub does not know it."""
     try:

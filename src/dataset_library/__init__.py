@@ -4,7 +4,7 @@ from typing import Callable, Protocol
 
 from .licenses import License, resolve_license
 
-__version__ = "0.2.1"
+__version__ = "0.3.0"
 
 __all__ = ["Cache", "License", "init_dataset_library", "resolve_license"]
 
@@ -24,9 +24,22 @@ class _Host:
     current_owner: Callable[[], str]
     task_types: list
     cache: Cache
+    is_admin: Callable[[], bool]
+    audit: Callable[..., None]
 
 
-def init_dataset_library(app, *, db, login_required, current_owner, task_types, cache, url_prefix="/api/library"):
+def init_dataset_library(
+    app,
+    *,
+    db,
+    login_required,
+    current_owner,
+    task_types,
+    cache,
+    is_admin=None,
+    audit=None,
+    url_prefix="/api/library",
+):
     """Mount the library API on a host Flask app.
 
     ``db`` is the host's Flask-SQLAlchemy handle; the tables come from
@@ -36,6 +49,9 @@ def init_dataset_library(app, *, db, login_required, current_owner, task_types, 
     ``task_types`` are the host's task type ids (legal-ml-core's TASK_TYPES
     values): the library offers no other. ``cache`` keeps search results
     (``get(key)``, ``set(key, value, ttl)``, JSON-serialisable values).
+    ``is_admin()`` says whether the signed-in user may change the library's
+    settings (nobody, by default). ``audit(event, **fields)`` records each
+    settings change; fields are counts and license ids, never personal data.
     """
     from .routes import library_bp
 
@@ -45,5 +61,7 @@ def init_dataset_library(app, *, db, login_required, current_owner, task_types, 
         current_owner=current_owner,
         task_types=list(task_types),
         cache=cache,
+        is_admin=is_admin or (lambda: False),
+        audit=audit or (lambda event, **fields: None),
     )
     app.register_blueprint(library_bp, url_prefix=url_prefix)

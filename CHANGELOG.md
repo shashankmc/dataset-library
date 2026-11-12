@@ -8,6 +8,22 @@ While the version is 0.x, minor releases may contain breaking changes.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-11-12
+
+### Added
+
+- Library settings for admins (BAIGLE #118). `init_dataset_library` takes
+  `is_admin()` (nobody by default) and `audit(event, **fields)`.
+  - `GET /api/library/admin/settings`: the sources and every license with its
+    default and current level.
+  - `PUT /api/library/admin/settings` with `{"sources": [{"ref", "enabled"}],
+    "license_policy": {id: level}}` replaces both. New sources must be Hugging
+    Face organisations with public datasets. Any invalid field gives 400 with
+    `fields` naming it, and nothing is saved. Each save is audited as
+    `library.settings_saved` with counts and the license ids whose level changed.
+  - `POST /api/library/admin/sources/check` with `{"ref"}` checks a source before saving.
+  - `/options` reports `admin`.
+
 ## [0.2.1] - 2026-11-12
 
 ### Added

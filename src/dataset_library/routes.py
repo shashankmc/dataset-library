@@ -1,6 +1,7 @@
 """The HTTP API, under /api/library."""
 from flask import Blueprint, current_app, jsonify, request
 
+from . import admin as admin_module
 from . import labels as labels_module
 from . import policy as policy_module
 from . import preview as preview_module
@@ -14,10 +15,10 @@ library_bp = Blueprint("dataset_library", __name__)
 
 
 class ApiError(Exception):
-    def __init__(self, status, message, code):
+    def __init__(self, status, message, code, **extra):
         super().__init__(message)
         self.status = status
-        self.body = {"error": message, "code": code}
+        self.body = {"error": message, "code": code, **extra}
 
 
 @library_bp.errorhandler(ApiError)
@@ -81,6 +82,7 @@ def options():
             ],
             "licenses": licenses,
             "groups": GROUPS,
+            "admin": bool(host.is_admin()),
             "sources": [
                 {"value": s.ref, "label": s.ref, "provider": s.provider}
                 for s in search_module.enabled_sources(host.db)
@@ -133,3 +135,42 @@ def dataset(external_id):
         raise ApiError(503, "Hugging Face is limiting requests. Try again in a few minutes.", "provider_rate_limited")
     except ProviderUnavailable:
         raise ApiError(503, "Hugging Face is unavailable right now. Try again in a few minutes.", "provider_unavailable")
+
+
+def _require_admin():
+    if not _host().is_admin():
+        raise ApiError(403, "Only the course's library admins can change these settings.", "not_admin")
+
+
+@library_bp.route("/admin/settings", methods=["GET"])
+def get_settings():
+    _require_admin()
+    return jsonify({**admin_module.current(_host().db), "groups": GROUPS})
+
+
+@library_bp.route("/admin/settings", methods=["PUT"])
+def put_settings():
+    _require_admin()
+    host = _host()
+    try:
+        changes = admin_module.save(host.db, request.get_json(silent=True) or {})
+    except admin_module.Invalid as invalid:
+        host.db.session.rollback()
+        raise ApiError(400, "Some settings need fixing.", "invalid", fields=invalid.fields)
+    except (ProviderRateLimited, ProviderUnavailable):
+        host.db.session.rollback()
+        raise ApiError(503, "Hugging Face could not check the new sources. Try again in a few minutes.", "provider_unavailable")
+    host.audit("library.settings_saved", **changes)
+    return jsonify({**admin_module.current(host.db), "groups": GROUPS})
+
+
+@library_bp.route("/admin/sources/check", methods=["POST"])
+def check_source():
+    """Whether a source can be added, before the admin saves."""
+    _require_admin()
+    ref = ((request.get_json(silent=True) or {}).get("ref") or "").strip()
+    try:
+        problem = admin_module.check_source(ref)
+    except (ProviderRateLimited, ProviderUnavailable):
+        raise ApiError(503, "Hugging Face could not be reached to check that. Try again in a few minutes.", "provider_unavailable")
+    return jsonify({"ref": ref, "ok": True} if problem is None else {"ref": ref, "ok": False, "error": problem})
