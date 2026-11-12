@@ -16,6 +16,8 @@ TIMEOUT = 10
 LIMIT = 30
 # Organisation, or organisation/dataset.
 ID_PATTERN = re.compile(r"^[\w.-]+(/[\w.-]+)?$")
+# A dataset: organisation/dataset, no dots alone, nothing that walks a path.
+DATASET_ID_PATTERN = re.compile(r"^(?!\.)[\w.-]+/(?!\.)[\w.-]+$")
 SIZE = {"n<1K": (0, 1_000)}
 _SUFFIX = {"K": 1_000, "M": 1_000_000, "B": 1_000_000_000, "T": 1_000_000_000_000}
 
@@ -40,6 +42,27 @@ def search(query, task, license_id, authors, task_types):
     for author in authors or [None]:
         records.extend(_get_with_retry({**params, "author": author} if author else params))
     return [_card(record, task_types) for record in records if not record.get("private") and not record.get("disabled")]
+
+
+def dataset(external_id, task_types):
+    """One dataset's card, or None when the Hub does not know it."""
+    try:
+        response = requests.get(f"{API}/{external_id}", timeout=TIMEOUT)
+    except requests.RequestException as exc:
+        raise ProviderUnavailable(str(exc)) from exc
+    if response.status_code in (401, 404):
+        return None
+    if response.status_code == 429:
+        raise ProviderRateLimited("Hugging Face is limiting requests")
+    if response.status_code != 200:
+        raise ProviderUnavailable(f"Hugging Face answered {response.status_code}")
+    try:
+        record = response.json()
+    except ValueError as exc:
+        raise ProviderUnavailable("Unreadable answer") from exc
+    if not isinstance(record, dict) or record.get("private") or record.get("disabled"):
+        return None
+    return _card(record, task_types)
 
 
 def _get_with_retry(params):

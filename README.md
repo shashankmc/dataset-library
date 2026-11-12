@@ -32,6 +32,11 @@ label `dataset_library`).
   `{"status": "ok" | "stale" | "unavailable", "results": [...], "count": n}`.
   `stale`: the Hub is limiting requests and these are the last results, up to a
   day old. `unavailable`: the Hub is down or unreadable; nothing is raised.
+- `GET /api/library/labels?ids=huggingface:org/name,...` → `{"labels": {id: "yes" | "no" | "unclear"}}`,
+  from the dataset viewer's column types; up to 30 ids, cached an hour each.
+- `GET /api/library/datasets/huggingface/<org>/<name>?config=&split=` → the
+  card plus `configs`, `config`, `split`, `columns`, the first `rows`, `labels`
+  and `preview: "ok" | "unavailable"`.
 - `GET /api/library/options` → the task, license and source filters, and the
   license table (`level` is this platform's: `allow`, `warn` or `hide`).
 
@@ -45,7 +50,7 @@ tag nobody recognises resolves to `unknown`.
 
 ## Security
 
-Only `https://huggingface.co/api/datasets` is called, with parameters built by
+Only `https://huggingface.co/api/datasets` and `https://datasets-server.huggingface.co` are called, with parameters built by
 the package. Descriptions are returned as plain text for the host to escape.
 
 ## Development

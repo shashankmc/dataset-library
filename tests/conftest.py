@@ -13,6 +13,10 @@ from dataset_library import init_dataset_library
 from dataset_library.models import LibraryBase
 
 FIXTURES = pathlib.Path(__file__).parent / "fixtures" / "huggingface"
+VIEWER = json.loads((pathlib.Path(__file__).parent / "fixtures" / "viewer" / "responses.json").read_text())
+HUB_DATASETS = json.loads((pathlib.Path(__file__).parent / "fixtures" / "hub" / "datasets.json").read_text())
+VIEWER_URL = "https://datasets-server.huggingface.co/"
+DATASET_URL = "https://huggingface.co/api/datasets/"
 TASK_TYPES = ["classification", "document_classification", "ner", "named_entity_recognition",
               "summarization", "topic_modeling", "clustering", "judgment_prediction"]
 
@@ -81,6 +85,13 @@ class FakeHub:
             return FakeResponse(200, "<html>oops</html>")
         if self.fail:
             return FakeResponse(self.fail, {"error": "busy"})
+        if url.startswith(VIEWER_URL):
+            query = url.removeprefix(VIEWER_URL) + "?" + "&".join(f"{k}={params[k]}" for k in ("dataset", "config", "split") if k in params)
+            recorded = VIEWER.get(query, {"status": 404, "body": {"error": "not recorded"}})
+            return FakeResponse(recorded["status"], recorded["body"])
+        if url.startswith(DATASET_URL):
+            recorded = HUB_DATASETS.get(url.removeprefix(DATASET_URL), {"status": 404, "body": {"error": "Repository not found"}})
+            return FakeResponse(recorded["status"], recorded["body"])
         assert url == "https://huggingface.co/api/datasets", url
         found = self.records
         if params.get("search"):

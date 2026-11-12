@@ -8,6 +8,21 @@ While the version is 0.x, minor releases may contain breaking changes.
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-12
+
+### Added
+
+- `GET /api/library/labels?ids=huggingface:org/name,...` (at most 30): whether
+  each dataset has labels, `yes`, `no` or `unclear`, from its column types in
+  Hugging Face's dataset viewer. A class-label column, or a summary or judgment
+  column, is `yes`; a label-like text column, or a dataset the viewer cannot
+  read, is `unclear`. Cached for an hour per dataset (BAIGLE #112).
+- `GET /api/library/datasets/huggingface/<org>/<name>?config=&split=`: one
+  dataset's card, configs and splits, column types and first 8 rows (class
+  labels by name). `preview` is `unavailable` when the viewer cannot read the
+  dataset or it is gated; the facts are still returned. 404 for a dataset
+  outside the enabled sources or under a hidden license. Cached 10 minutes.
+
 ## [0.1.0] - 2026-11-12
 
 ### Added

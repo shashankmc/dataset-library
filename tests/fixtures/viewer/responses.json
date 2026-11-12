@@ -1,0 +1,2026 @@
+{
+ "info?dataset=coastalcph/lex_glue&config=ledgar": {
+  "status": 200,
+  "body": {
+   "dataset_info": {
+    "features": {
+     "text": {
+      "dtype": "string",
+      "_type": "Value"
+     },
+     "label": {
+      "names": [
+       "Adjustments",
+       "Agreements",
+       "Amendments",
+       "Anti-Corruption Laws",
+       "Applicable Laws",
+       "Approvals",
+       "Arbitration",
+       "Assignments",
+       "Assigns",
+       "Authority",
+       "Authorizations",
+       "Base Salary",
+       "Benefits",
+       "Binding Effects",
+       "Books",
+       "Brokers",
+       "Capitalization",
+       "Change In Control",
+       "Closings",
+       "Compliance With Laws",
+       "Confidentiality",
+       "Consent To Jurisdiction",
+       "Consents",
+       "Construction",
+       "Cooperation",
+       "Costs",
+       "Counterparts",
+       "Death",
+       "Defined Terms",
+       "Definitions",
+       "Disability",
+       "Disclosures",
+       "Duties",
+       "Effective Dates",
+       "Effectiveness",
+       "Employment",
+       "Enforceability",
+       "Enforcements",
+       "Entire Agreements",
+       "Erisa"
+      ],
+      "_type": "ClassLabel"
+     }
+    },
+    "splits": {
+     "train": {
+      "name": "train",
+      "num_bytes": 43662720,
+      "num_examples": 60000,
+      "dataset_name": null
+     },
+     "test": {
+      "name": "test",
+      "num_bytes": 6943490,
+      "num_examples": 10000,
+      "dataset_name": null
+     },
+     "validation": {
+      "name": "validation",
+      "num_bytes": 6874260,
+      "num_examples": 10000,
+      "dataset_name": null
+     }
+    },
+    "config_name": "ledgar",
+    "dataset_name": "lex_glue",
+    "license": "",
+    "description": ""
+   },
+   "partial": false
+  }
+ },
+ "info?dataset=coastalcph/lex_glue": {
+  "status": 200,
+  "body": {
+   "dataset_info": {
+    "case_hold": {
+     "features": {
+      "context": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "endings": {
+       "feature": {
+        "dtype": "string",
+        "_type": "Value"
+       },
+       "_type": "Sequence"
+      },
+      "label": {
+       "names": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+       ],
+       "_type": "ClassLabel"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 75423330,
+       "num_examples": 45000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 5993596,
+       "num_examples": 3600,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 6550728,
+       "num_examples": 3900,
+       "dataset_name": null
+      }
+     },
+     "config_name": "case_hold",
+     "dataset_name": "lex_glue",
+     "license": "",
+     "description": ""
+    },
+    "ecthr_a": {
+     "features": {
+      "text": {
+       "feature": {
+        "dtype": "string",
+        "_type": "Value"
+       },
+       "_type": "Sequence"
+      },
+      "labels": {
+       "feature": {
+        "names": [
+         "2",
+         "3",
+         "5",
+         "6",
+         "8",
+         "9",
+         "10",
+         "11",
+         "14",
+         "P1-1"
+        ],
+        "_type": "ClassLabel"
+       },
+       "_type": "Sequence"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 77558049,
+       "num_examples": 9000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 11884305,
+       "num_examples": 1000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 10985301,
+       "num_examples": 1000,
+       "dataset_name": null
+      }
+     },
+     "config_name": "ecthr_a",
+     "dataset_name": "lex_glue",
+     "license": "",
+     "description": ""
+    },
+    "ecthr_b": {
+     "features": {
+      "text": {
+       "feature": {
+        "dtype": "string",
+        "_type": "Value"
+       },
+       "_type": "Sequence"
+      },
+      "labels": {
+       "feature": {
+        "names": [
+         "2",
+         "3",
+         "5",
+         "6",
+         "8",
+         "9",
+         "10",
+         "11",
+         "14",
+         "P1-1"
+        ],
+        "_type": "ClassLabel"
+       },
+       "_type": "Sequence"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 77583789,
+       "num_examples": 9000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 11887108,
+       "num_examples": 1000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 10987990,
+       "num_examples": 1000,
+       "dataset_name": null
+      }
+     },
+     "config_name": "ecthr_b",
+     "dataset_name": "lex_glue",
+     "license": "",
+     "description": ""
+    },
+    "eurlex": {
+     "features": {
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "labels": {
+       "feature": {
+        "names": [
+         "100163",
+         "100168",
+         "100169",
+         "100170",
+         "100171",
+         "100172",
+         "100173",
+         "100174",
+         "100175",
+         "100176",
+         "100177",
+         "100179",
+         "100180",
+         "100183",
+         "100184",
+         "100185",
+         "100186",
+         "100187",
+         "100189",
+         "100190",
+         "100191",
+         "100192",
+         "100193",
+         "100194",
+         "100195",
+         "100196",
+         "100197",
+         "100198",
+         "100199",
+         "100200",
+         "100201",
+         "100202",
+         "100204",
+         "100205",
+         "100206",
+         "100207",
+         "100212",
+         "100214",
+         "100215",
+         "100220"
+        ],
+        "_type": "ClassLabel"
+       },
+       "_type": "Sequence"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 443469785,
+       "num_examples": 55000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 61426145,
+       "num_examples": 5000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 39157040,
+       "num_examples": 5000,
+       "dataset_name": null
+      }
+     },
+     "config_name": "eurlex",
+     "dataset_name": "lex_glue",
+     "license": "",
+     "description": ""
+    },
+    "ledgar": {
+     "features": {
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "label": {
+       "names": [
+        "Adjustments",
+        "Agreements",
+        "Amendments",
+        "Anti-Corruption Laws",
+        "Applicable Laws",
+        "Approvals",
+        "Arbitration",
+        "Assignments",
+        "Assigns",
+        "Authority",
+        "Authorizations",
+        "Base Salary",
+        "Benefits",
+        "Binding Effects",
+        "Books",
+        "Brokers",
+        "Capitalization",
+        "Change In Control",
+        "Closings",
+        "Compliance With Laws",
+        "Confidentiality",
+        "Consent To Jurisdiction",
+        "Consents",
+        "Construction",
+        "Cooperation",
+        "Costs",
+        "Counterparts",
+        "Death",
+        "Defined Terms",
+        "Definitions",
+        "Disability",
+        "Disclosures",
+        "Duties",
+        "Effective Dates",
+        "Effectiveness",
+        "Employment",
+        "Enforceability",
+        "Enforcements",
+        "Entire Agreements",
+        "Erisa"
+       ],
+       "_type": "ClassLabel"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 43662720,
+       "num_examples": 60000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 6943490,
+       "num_examples": 10000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 6874260,
+       "num_examples": 10000,
+       "dataset_name": null
+      }
+     },
+     "config_name": "ledgar",
+     "dataset_name": "lex_glue",
+     "license": "",
+     "description": ""
+    },
+    "scotus": {
+     "features": {
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "label": {
+       "names": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+       ],
+       "_type": "ClassLabel"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 141552710,
+       "num_examples": 5000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 78969706,
+       "num_examples": 1400,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 74770462,
+       "num_examples": 1400,
+       "dataset_name": null
+      }
+     },
+     "config_name": "scotus",
+     "dataset_name": "lex_glue",
+     "license": "",
+     "description": ""
+    },
+    "unfair_tos": {
+     "features": {
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "labels": {
+       "feature": {
+        "names": [
+         "Limitation of liability",
+         "Unilateral termination",
+         "Unilateral change",
+         "Content removal",
+         "Contract by using",
+         "Choice of law",
+         "Jurisdiction",
+         "Arbitration"
+        ],
+        "_type": "ClassLabel"
+       },
+       "_type": "Sequence"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 1082684,
+       "num_examples": 5532,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 286772,
+       "num_examples": 1607,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 475916,
+       "num_examples": 2275,
+       "dataset_name": null
+      }
+     },
+     "config_name": "unfair_tos",
+     "dataset_name": "lex_glue",
+     "license": "",
+     "description": ""
+    }
+   },
+   "partial": false
+  }
+ },
+ "info?dataset=nguha/legalbench": {
+  "status": 200,
+  "body": {
+   "dataset_info": {
+    "abercrombie": {
+     "features": {
+      "index": {
+       "dtype": "int64",
+       "_type": "Value"
+      },
+      "answer": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 322,
+       "num_examples": 5,
+       "dataset_name": "legalbench"
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 6440,
+       "num_examples": 95,
+       "dataset_name": "legalbench"
+      }
+     },
+     "config_name": "abercrombie",
+     "dataset_name": "legalbench",
+     "license": "",
+     "description": ""
+    },
+    "contract_nli_explicit_identification": {
+     "features": {
+      "index": {
+       "dtype": "int64",
+       "_type": "Value"
+      },
+      "answer": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "document_name": {
+       "dtype": "string",
+       "_type": "Value"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 3639,
+       "num_examples": 8,
+       "dataset_name": "legalbench"
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 62352,
+       "num_examples": 109,
+       "dataset_name": "legalbench"
+      }
+     },
+     "config_name": "contract_nli_explicit_identification",
+     "dataset_name": "legalbench",
+     "license": "",
+     "description": ""
+    },
+    "hearsay": {
+     "features": {
+      "index": {
+       "dtype": "int64",
+       "_type": "Value"
+      },
+      "answer": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "slice": {
+       "dtype": "string",
+       "_type": "Value"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 803,
+       "num_examples": 5,
+       "dataset_name": "legalbench"
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 17348,
+       "num_examples": 94,
+       "dataset_name": "legalbench"
+      }
+     },
+     "config_name": "hearsay",
+     "dataset_name": "legalbench",
+     "license": "",
+     "description": ""
+    }
+   },
+   "partial": false
+  }
+ },
+ "info?dataset=nguha/legalbench&config=hearsay": {
+  "status": 200,
+  "body": {
+   "dataset_info": {
+    "features": {
+     "index": {
+      "dtype": "int64",
+      "_type": "Value"
+     },
+     "answer": {
+      "dtype": "string",
+      "_type": "Value"
+     },
+     "text": {
+      "dtype": "string",
+      "_type": "Value"
+     },
+     "slice": {
+      "dtype": "string",
+      "_type": "Value"
+     }
+    },
+    "splits": {
+     "train": {
+      "name": "train",
+      "num_bytes": 803,
+      "num_examples": 5,
+      "dataset_name": "legalbench"
+     },
+     "test": {
+      "name": "test",
+      "num_bytes": 17348,
+      "num_examples": 94,
+      "dataset_name": "legalbench"
+     }
+    },
+    "config_name": "hearsay",
+    "dataset_name": "legalbench",
+    "license": "",
+    "description": ""
+   },
+   "partial": false
+  }
+ },
+ "info?dataset=AI-team-UoA/greek_legal_code": {
+  "status": 200,
+  "body": {
+   "dataset_info": {
+    "volume": {
+     "features": {
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "label": {
+       "names": [
+        "ΚΟΙΝΩΝΙΚΗ ΠΡΟΝΟΙΑ",
+        "ΓΕΩΡΓΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΡΑΔΙΟΦΩΝΙΑ ΚΑΙ ΤΥΠΟΣ",
+        "ΒΙΟΜΗΧΑΝΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΥΓΕΙΟΝΟΜΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΠΟΛΕΜΙΚΟ ΝΑΥΤΙΚΟ",
+        "ΤΑΧΥΔΡΟΜΕΙΑ - ΤΗΛΕΠΙΚΟΙΝΩΝΙΕΣ",
+        "ΔΑΣΗ ΚΑΙ ΚΤΗΝΟΤΡΟΦΙΑ",
+        "ΕΛΕΓΚΤΙΚΟ ΣΥΝΕΔΡΙΟ ΚΑΙ ΣΥΝΤΑΞΕΙΣ",
+        "ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ",
+        "ΝΟΜΙΚΑ ΠΡΟΣΩΠΑ ΔΗΜΟΣΙΟΥ ΔΙΚΑΙΟΥ",
+        "ΝΟΜΟΘΕΣΙΑ ΑΝΩΝΥΜΩΝ ΕΤΑΙΡΕΙΩΝ ΤΡΑΠΕΖΩΝ ΚΑΙ ΧΡΗΜΑΤΙΣΤΗΡΙΩΝ",
+        "ΠΟΛΙΤΙΚΗ ΑΕΡΟΠΟΡΙΑ",
+        "ΕΜΜΕΣΗ ΦΟΡΟΛΟΓΙΑ",
+        "ΚΟΙΝΩΝΙΚΕΣ ΑΣΦΑΛΙΣΕΙΣ",
+        "ΝΟΜΟΘΕΣΙΑ ΔΗΜΩΝ ΚΑΙ ΚΟΙΝΟΤΗΤΩΝ",
+        "ΝΟΜΟΘΕΣΙΑ ΕΠΙΜΕΛΗΤΗΡΙΩΝ ΣΥΝΕΤΑΙΡΙΣΜΩΝ ΚΑΙ ΣΩΜΑΤΕΙΩΝ",
+        "ΔΗΜΟΣΙΑ ΕΡΓΑ",
+        "ΔΙΟΙΚΗΣΗ ΔΙΚΑΙΟΣΥΝΗΣ",
+        "ΑΣΦΑΛΙΣΤΙΚΑ ΤΑΜΕΙΑ",
+        "ΕΚΚΛΗΣΙΑΣΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΕΚΠΑΙΔΕΥΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΔΗΜΟΣΙΟ ΛΟΓΙΣΤΙΚΟ",
+        "ΤΕΛΩΝΕΙΑΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΣΥΓΚΟΙΝΩΝΙΕΣ",
+        "ΕΘΝΙΚΗ ΑΜΥΝΑ",
+        "ΣΤΡΑΤΟΣ ΞΗΡΑΣ",
+        "ΑΓΟΡΑΝΟΜΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΔΗΜΟΣΙΟΙ ΥΠΑΛΛΗΛΟΙ",
+        "ΠΕΡΙΟΥΣΙΑ ΔΗΜΟΣΙΟΥ ΚΑΙ ΝΟΜΙΣΜΑ",
+        "ΟΙΚΟΝΟΜΙΚΗ ΔΙΟΙΚΗΣΗ",
+        "ΛΙΜΕΝΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΑΣΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΠΟΛΙΤΙΚΗ ΔΙΚΟΝΟΜΙΑ",
+        "ΔΙΠΛΩΜΑΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΔΙΟΙΚΗΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+        "ΑΜΕΣΗ ΦΟΡΟΛΟΓΙΑ",
+        "ΤΥΠΟΣ ΚΑΙ ΤΟΥΡΙΣΜΟΣ",
+        "ΕΘΝΙΚΗ ΟΙΚΟΝΟΜΙΑ",
+        "ΑΣΤΥΝΟΜΙΚΗ ΝΟΜΟΘΕΣΙΑ"
+       ],
+       "_type": "ClassLabel"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 212848254,
+       "num_examples": 28536,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 71319374,
+       "num_examples": 9516,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 75330296,
+       "num_examples": 9511,
+       "dataset_name": null
+      }
+     },
+     "config_name": "volume",
+     "dataset_name": "greek_legal_code",
+     "license": "",
+     "description": ""
+    },
+    "chapter": {
+     "features": {
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "label": {
+       "names": [
+        "ΜΕΤΑΛΛΕΙΑ ΚΑΙ ΟΡΥΧΕΙΑ",
+        "ΣΤΑΤΙΩΤΙΚΕΣ ΣΧΟΛΕΣ",
+        "ΠΑΡΟΧΕΣ ΑΝΕΡΓΙΑΣ",
+        "ΣΙΔΗΡΟΔΡΟΜΙΚΑ ΔΙΚΤΥΑ",
+        "ΕΙΔΙΚΑ ΣΤΡΑΤΙΩΤΙΚΑ ΑΔΙΚΗΜΑΤΑ",
+        "ΚΡΑΤΙΚΕΣ ΠΡΟΜΗΘΕΙΕΣ",
+        "ΑΓΡΟΤΙΚΗ ΑΠΟΚΑΤΑΣΤΑΣΗ",
+        "ΑΞΙΩΜΑΤΙΚΟΙ ΠΟΛΕΜΙΚΟΥ ΝΑΥΤΙΚΟΥ",
+        "ΣΧΕΔΙΑ ΠΟΛΕΩΝ",
+        "ΣΥΚΑ",
+        "ΠΡΟΛΗΨΙΣ ΚΑΙ ΔΙΩΞΙΣ ΤΟΥ ΕΓΚΛΗΜΑΤΟΣ",
+        "ΔΙΕΘΝΕΙΣ ΜΕΤΑΦΟΡΕΣ",
+        "ΓΕΝΙΚΗ ΣΥΓΚΟΙΝΩΝΙΑ ΚΑΙ ΔΙΑΤΑΞΕΙΣ",
+        "ΚΛΗΡΟΝΟΜΙΚΟ ΔΙΚΑΙΟ",
+        "ΚΟΙΝΩΝΙΚΗ ΑΝΤΙΛΗΨΗ",
+        "ΝΑΥΤΙΛΙΑΚΕΣ ΣΗΜΑΝΣΕΙΣ",
+        "ΔΙΕΘΝΕΣ ΠΟΙΝΙΚΟ ΔΙΚΑΙΟ",
+        "ΑΣΦΑΛΙΣΤΙΚΟΙ ΟΡΓΑΝΙΣΜΟΙ Ε.Ν",
+        "ΣΩΜΑΤΙΚΗ ΑΓΩΓΗ",
+        "ΣΠΟΡΟΠΑΡΑΓΩΓΗ",
+        "ΥΠΗΡΕΣΙΑΙ ΔΗΜΟΣΙΩΝ ΕΡΓΩΝ",
+        "ΤΑΜΕΙΑ ΣΥΝΤΑΞΕΩΝ ΤΡΑΠΕΖΩΝ",
+        "ΠΥΡΟΣΒΕΣΤΙΚΟ ΣΩΜΑ",
+        "ΔΙΑΦΟΡΕΣ ΒΙΟΜΗΧΑΝΙΕΣ",
+        "ΕΚΤΕΛΕΣΗ ΚΑΙ ΣΥΝΕΠΕΙΕΣ ΤΗΣ ΠΟΙΝΗΣ",
+        "ΔΙΕΘΝΕΙΣ ΑΣΦΑΛΙΣΤΙΚΕΣ ΣΥΜΒΑΣΕΙΣ",
+        "ΝΟΜΟΘΕΣΙΑ",
+        "ΒΑΜΒΑΚΙ",
+        "ΠΑΡΟΧΕΣ ΣΥΝΤΑΞΕΩΝ",
+        "ΝΟΜΙΣΜΑ",
+        "ΣΥΜΒΑΣΗ ΝΑΥΤΙΚΗΣ ΕΡΓΑΣΙΑΣ",
+        "ΟΡΓΑΝΙΣΜΟΊ ΚΟΙΝΩΝΙΚΉΣ ΑΣΦΑΛΊΣΕΩΣ",
+        "ΑΓΡΟΤΙΚΗ ΑΣΦΑΛΕΙΑ",
+        "ΥΓΕΙΟΝΟΜΙΚΟΣ ΕΛΕΓΧΟΣ ΕΙΣΕΡΧΟΜΕΝΩΝ",
+        "ΜΟΥΣΕΙΑ ΚΑΙ ΣΥΛΛΟΓΕΣ",
+        "ΠΡΟΣΩΠΙΚΟ Ι.Κ.Α",
+        "ΞΕΝΟΔΟΧΕΙΑ",
+        "ΚΡΑΤΙΚΗ ΑΣΦΑΛΕΙΑ",
+        "ΣΥΝΕΤΑΙΡΙΣΜΟΙ",
+        "ΠΟΛΥΕΘΝΕΙΣ ΣΥΜΦΩΝΙΕΣ"
+       ],
+       "_type": "ClassLabel"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 212848254,
+       "num_examples": 28536,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 71319374,
+       "num_examples": 9516,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 75330296,
+       "num_examples": 9511,
+       "dataset_name": null
+      }
+     },
+     "config_name": "chapter",
+     "dataset_name": "greek_legal_code",
+     "license": "",
+     "description": ""
+    },
+    "subject": {
+     "features": {
+      "text": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "label": {
+       "names": [
+        "ΜΕΤΟΧΙΚΟ ΤΑΜΕΙΟ Π.Ν",
+        "ΜΕΤΑΝΑΣΤΕΥΣΗ ΣΤΟ ΒΕΛΓΙΟ",
+        "ΝΑΥΤΙΚΕΣ ΦΥΛΑΚΕΣ",
+        "ΚΑΝΟΝΙΣΜΟΣ ΕΚΤΕΛΕΣΕΩΣ ΣΤΡΑΤΙΩΤΙΚΩΝ ΕΡΓΩΝ",
+        "ΔΙΟΙΚΗΤΙΚΗ ΚΑΙ ΟΙΚΟΝΟΜΙΚΗ ΥΠΗΡΕΣΙΑ",
+        "ΑΣΚΗΣΗ ΠΟΙΝΙΚΗΣ ΑΓΩΓΗΣ",
+        "ΚΑΝΟΝΙΣΜΟΣ ΕΣΩΤΕΡΙΚΗΣ ΥΠΗΡΕΣΙΑΣ ΕΠΙΒΑΤΗΓΩΝ ΠΛΟΙΩΝ",
+        "ΚΩΔΙΚΑΣ ΠΟΛΙΤΙΚΗΣ ΔΙΚΟΝΟΜΙΑΣ - ΠΑΛΑΙΟΣ",
+        "ΚΑΤΑΣΤΑΤΙΚΟ ΤΑΜΕΙΟΥ ΑΣΦΑΛΙΣΕΩΣ ΕΜΠΟΡΩΝ (Τ.Α.Ε)",
+        "ΜΗΧΑΝΟΛΟΓΟΙ, ΗΛΕΚΤΡΟΛΟΓΟΙ, ΝΑΥΠΗΓΟΙ ΚΑΙ ΜΗΧΑΝΟΔΗΓΟΙ",
+        "ΣΤΕΓΑΣΗ ΠΑΡΑΠΗΓΜΑΤΟΥΧΩΝ",
+        "ΝΟΜΙΣΜΑΤΙΚΗ ΕΠΙΤΡΟΠΗ",
+        "ΠΕΡΙΦΕΡΕΙΑΚΑ ΤΑΜΕΙΑ",
+        "ΜΗΤΡΩΑ ΑΡΡΕΝΩΝ",
+        "ΔΙΚΑΣΤΙΚΕΣ ΔΙΑΚΟΠΕΣ",
+        "ΣΥΜΦΩΝΙΑ ΠΕΡΙ ΠΡΟΞΕΝΙΚΩΝ ΣΧΕΣΕΩΝ",
+        "ΠΑΛΑΙΟΙ ΑΣΤΙΚΟΙ ΚΩΔΙΚΕΣ",
+        "ΚΛΑΔΟΣ ΕΠΙΚΟΥΡΙΚΗΣ ΑΣΦΑΛΙΣΕΩΣ ΔΙΚΗΓΟΡΩΝ (Κ.Ε.Α.Δ.)",
+        "ΟΙΚΟΝΟΜΙΚΕΣ ΑΡΜΟΔΙΟΤΗΤΕΣ ΣΤΡΑΤΙΩΤΙΚΩΝ ΑΡΧΩΝ",
+        "ΥΠΟΝΟΜΟΙ ΘΕΣΣΑΛΟΝΙΚΗΣ",
+        "ΔΙΑΦΟΡΑ ΥΔΡΑΥΛΙΚΑ ΤΑΜΕΙΑ",
+        "ΕΛΕΓΧΟΣ ΘΕΑΤΡΙΚΩΝ ΕΡΓΩΝ ΚΑΙ ΔΙΣΚΩΝ",
+        "ΥΠΗΡΕΣΙΑ ΙΠΠΟΠΑΡΑΓΩΓΗΣ",
+        "ΣΩΜΑΤΙΚΗ ΑΓΩΓΗ",
+        "ΕΚΔΙΚΑΣΗ ΤΕΛΩΝΕΙΑΚΩΝ ΠΑΡΑΒΑΣΕΩΝ",
+        "ΚΙΝΗΤΡΑ ΙΔΙΩΤΙΚΩΝ ΕΠΕΝΔΥΣΕΩΝ ΣΤΗΝ ΠΕΡΙΦΕΡΕΙΑ",
+        "ΜΕΛΗ ΟΙΚΟΓΕΝΕΙΑΣ ΑΣΦΑΛΙΣΜΕΝΩΝ",
+        "ΚΕΡΜΑΤΑ",
+        "ΕΠΙΔΟΜΑ ΑΝΑΠΡΟΣΑΡΜΟΓΗΣ",
+        "ΕΚΤΕΛΕΣΗ ΔΑΣΙΚΩΝ ΕΡΓΩΝ",
+        "ΛΙΠΑΣΜΑΤΑ",
+        "ΕΠΙΧΟΡΗΓΗΣΗ ΣΠΟΥΔΑΣΤΩΝ ΤΕΚΝΩΝ ΕΡΓΑΖΟΜΕΝΩΝ",
+        "ΠΡΟΣΤΑΣΙΑ ΟΙΝΟΥ",
+        "ΠΤΗΤΙΚΟ ΚΑΙ ΚΑΤΑΔΥΤΙΚΟ ΕΠΙΔΟΜΑ",
+        "ΤΑΜΕΙΟ ΕΠΙΚΟΥΡΙΚΗΣ ΑΣΦΑΛΙΣΕΩΣ ΥΠΑΛΛΗΛΩΝ ΕΜΠΟΡΙΚΩΝ ΚΑΤΑΣΤΗΜΑΤΩΝ (Τ.Ε.Α.Υ.Ε.Κ.)",
+        "ΕΚΚΟΚΚΙΣΗ ΒΑΜΒΑΚΟΣ",
+        "ΜΟΝΟΠΩΛΙΟ ΚΙΝΙΝΟΥ",
+        "ΙΝΣΤΙΤΟΥΤΑ ΔΙΕΘΝΟΥΣ ΔΙΚΑΙΟΥ",
+        "ΙΑΠΩΝΙΑ – ΙΝΔΙΑ –ΙΟΡΔΑΝΙΑ Κ.ΛΠ",
+        "ΕΠΙΔΟΜΑ ΣΤΟΛΗΣ"
+       ],
+       "_type": "ClassLabel"
+      }
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 212848254,
+       "num_examples": 28536,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 71319374,
+       "num_examples": 9516,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 75330296,
+       "num_examples": 9511,
+       "dataset_name": null
+      }
+     },
+     "config_name": "subject",
+     "dataset_name": "greek_legal_code",
+     "license": "",
+     "description": ""
+    }
+   },
+   "partial": false
+  }
+ },
+ "info?dataset=AI-team-UoA/greek_legal_code&config=volume": {
+  "status": 200,
+  "body": {
+   "dataset_info": {
+    "features": {
+     "text": {
+      "dtype": "string",
+      "_type": "Value"
+     },
+     "label": {
+      "names": [
+       "ΚΟΙΝΩΝΙΚΗ ΠΡΟΝΟΙΑ",
+       "ΓΕΩΡΓΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΡΑΔΙΟΦΩΝΙΑ ΚΑΙ ΤΥΠΟΣ",
+       "ΒΙΟΜΗΧΑΝΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΥΓΕΙΟΝΟΜΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΠΟΛΕΜΙΚΟ ΝΑΥΤΙΚΟ",
+       "ΤΑΧΥΔΡΟΜΕΙΑ - ΤΗΛΕΠΙΚΟΙΝΩΝΙΕΣ",
+       "ΔΑΣΗ ΚΑΙ ΚΤΗΝΟΤΡΟΦΙΑ",
+       "ΕΛΕΓΚΤΙΚΟ ΣΥΝΕΔΡΙΟ ΚΑΙ ΣΥΝΤΑΞΕΙΣ",
+       "ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ",
+       "ΝΟΜΙΚΑ ΠΡΟΣΩΠΑ ΔΗΜΟΣΙΟΥ ΔΙΚΑΙΟΥ",
+       "ΝΟΜΟΘΕΣΙΑ ΑΝΩΝΥΜΩΝ ΕΤΑΙΡΕΙΩΝ ΤΡΑΠΕΖΩΝ ΚΑΙ ΧΡΗΜΑΤΙΣΤΗΡΙΩΝ",
+       "ΠΟΛΙΤΙΚΗ ΑΕΡΟΠΟΡΙΑ",
+       "ΕΜΜΕΣΗ ΦΟΡΟΛΟΓΙΑ",
+       "ΚΟΙΝΩΝΙΚΕΣ ΑΣΦΑΛΙΣΕΙΣ",
+       "ΝΟΜΟΘΕΣΙΑ ΔΗΜΩΝ ΚΑΙ ΚΟΙΝΟΤΗΤΩΝ",
+       "ΝΟΜΟΘΕΣΙΑ ΕΠΙΜΕΛΗΤΗΡΙΩΝ ΣΥΝΕΤΑΙΡΙΣΜΩΝ ΚΑΙ ΣΩΜΑΤΕΙΩΝ",
+       "ΔΗΜΟΣΙΑ ΕΡΓΑ",
+       "ΔΙΟΙΚΗΣΗ ΔΙΚΑΙΟΣΥΝΗΣ",
+       "ΑΣΦΑΛΙΣΤΙΚΑ ΤΑΜΕΙΑ",
+       "ΕΚΚΛΗΣΙΑΣΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΕΚΠΑΙΔΕΥΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΔΗΜΟΣΙΟ ΛΟΓΙΣΤΙΚΟ",
+       "ΤΕΛΩΝΕΙΑΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΣΥΓΚΟΙΝΩΝΙΕΣ",
+       "ΕΘΝΙΚΗ ΑΜΥΝΑ",
+       "ΣΤΡΑΤΟΣ ΞΗΡΑΣ",
+       "ΑΓΟΡΑΝΟΜΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΔΗΜΟΣΙΟΙ ΥΠΑΛΛΗΛΟΙ",
+       "ΠΕΡΙΟΥΣΙΑ ΔΗΜΟΣΙΟΥ ΚΑΙ ΝΟΜΙΣΜΑ",
+       "ΟΙΚΟΝΟΜΙΚΗ ΔΙΟΙΚΗΣΗ",
+       "ΛΙΜΕΝΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΑΣΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΠΟΛΙΤΙΚΗ ΔΙΚΟΝΟΜΙΑ",
+       "ΔΙΠΛΩΜΑΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΔΙΟΙΚΗΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΑΜΕΣΗ ΦΟΡΟΛΟΓΙΑ",
+       "ΤΥΠΟΣ ΚΑΙ ΤΟΥΡΙΣΜΟΣ",
+       "ΕΘΝΙΚΗ ΟΙΚΟΝΟΜΙΑ",
+       "ΑΣΤΥΝΟΜΙΚΗ ΝΟΜΟΘΕΣΙΑ"
+      ],
+      "_type": "ClassLabel"
+     }
+    },
+    "splits": {
+     "train": {
+      "name": "train",
+      "num_bytes": 212848254,
+      "num_examples": 28536,
+      "dataset_name": null
+     },
+     "test": {
+      "name": "test",
+      "num_bytes": 71319374,
+      "num_examples": 9516,
+      "dataset_name": null
+     },
+     "validation": {
+      "name": "validation",
+      "num_bytes": 75330296,
+      "num_examples": 9511,
+      "dataset_name": null
+     }
+    },
+    "config_name": "volume",
+    "dataset_name": "greek_legal_code",
+    "license": "",
+    "description": ""
+   },
+   "partial": false
+  }
+ },
+ "info?dataset=jfrenz/legalglue": {
+  "status": 501,
+  "body": {
+   "error": "The dataset viewer doesn't support this dataset because it runs arbitrary python code. Please open a discussion in the discussion tab if you think this is an error and tag @lhoestq and @severo."
+  }
+ },
+ "info?dataset=lighteval/lexglue": {
+  "status": 200,
+  "body": {
+   "dataset_info": {
+    "all": {
+     "features": {
+      "input": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "references": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ],
+      "gold": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ]
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 1624519348,
+       "num_examples": 188532,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 269731120,
+       "num_examples": 24575,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 280259518,
+       "num_examples": 23607,
+       "dataset_name": null
+      }
+     },
+     "config_name": "all",
+     "dataset_name": "lexglue",
+     "license": "",
+     "description": ""
+    },
+    "case_hold": {
+     "features": {
+      "input": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "references": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ],
+      "gold": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ]
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 77037705,
+       "num_examples": 45000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 6690641,
+       "num_examples": 3900,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 6122746,
+       "num_examples": 3600,
+       "dataset_name": null
+      }
+     },
+     "config_name": "case_hold",
+     "dataset_name": "lexglue",
+     "license": "",
+     "description": ""
+    },
+    "ecthr_a": {
+     "features": {
+      "input": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "references": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ],
+      "gold": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ]
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 77550093,
+       "num_examples": 9000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 10975834,
+       "num_examples": 1000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 11871882,
+       "num_examples": 1000,
+       "dataset_name": null
+      }
+     },
+     "config_name": "ecthr_a",
+     "dataset_name": "lexglue",
+     "license": "",
+     "description": ""
+    },
+    "ecthr_b": {
+     "features": {
+      "input": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "references": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ],
+      "gold": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ]
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 77555673,
+       "num_examples": 9000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 10975713,
+       "num_examples": 1000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 11871939,
+       "num_examples": 1000,
+       "dataset_name": null
+      }
+     },
+     "config_name": "ecthr_b",
+     "dataset_name": "lexglue",
+     "license": "",
+     "description": ""
+    },
+    "eurlex": {
+     "features": {
+      "input": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "references": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ],
+      "gold": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ]
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 454994815,
+       "num_examples": 55000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 40211845,
+       "num_examples": 5000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 62482540,
+       "num_examples": 5000,
+       "dataset_name": null
+      }
+     },
+     "config_name": "eurlex",
+     "dataset_name": "lexglue",
+     "license": "",
+     "description": ""
+    },
+    "ledgar": {
+     "features": {
+      "input": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "references": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ],
+      "gold": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ]
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 73214460,
+       "num_examples": 60000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 11798660,
+       "num_examples": 10000,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 11892250,
+       "num_examples": 10000,
+       "dataset_name": null
+      }
+     },
+     "config_name": "ledgar",
+     "dataset_name": "lexglue",
+     "license": "",
+     "description": ""
+    },
+    "scotus": {
+     "features": {
+      "input": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "references": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ],
+      "gold": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ]
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 141922730,
+       "num_examples": 5000,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 74874031,
+       "num_examples": 1400,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 79073290,
+       "num_examples": 1400,
+       "dataset_name": null
+      }
+     },
+     "config_name": "scotus",
+     "dataset_name": "lexglue",
+     "license": "",
+     "description": ""
+    },
+    "unfair_tos": {
+     "features": {
+      "input": {
+       "dtype": "string",
+       "_type": "Value"
+      },
+      "references": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ],
+      "gold": [
+       {
+        "dtype": "string",
+        "_type": "Value"
+       }
+      ]
+     },
+     "splits": {
+      "train": {
+       "name": "train",
+       "num_bytes": 1446230,
+       "num_examples": 5532,
+       "dataset_name": null
+      },
+      "validation": {
+       "name": "validation",
+       "num_bytes": 627144,
+       "num_examples": 2275,
+       "dataset_name": null
+      },
+      "test": {
+       "name": "test",
+       "num_bytes": 393240,
+       "num_examples": 1607,
+       "dataset_name": null
+      }
+     },
+     "config_name": "unfair_tos",
+     "dataset_name": "lexglue",
+     "license": "",
+     "description": ""
+    }
+   },
+   "partial": false
+  }
+ },
+ "splits?dataset=coastalcph/lex_glue": {
+  "status": 200,
+  "body": {
+   "splits": [
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "case_hold",
+     "split": "train"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "case_hold",
+     "split": "test"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "case_hold",
+     "split": "validation"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ecthr_a",
+     "split": "train"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ecthr_a",
+     "split": "test"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ecthr_a",
+     "split": "validation"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ecthr_b",
+     "split": "train"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ecthr_b",
+     "split": "test"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ecthr_b",
+     "split": "validation"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "eurlex",
+     "split": "train"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "eurlex",
+     "split": "test"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "eurlex",
+     "split": "validation"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ledgar",
+     "split": "train"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ledgar",
+     "split": "test"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ledgar",
+     "split": "validation"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "scotus",
+     "split": "train"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "scotus",
+     "split": "test"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "scotus",
+     "split": "validation"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "unfair_tos",
+     "split": "train"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "unfair_tos",
+     "split": "test"
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "unfair_tos",
+     "split": "validation"
+    }
+   ],
+   "pending": [],
+   "failed": []
+  }
+ },
+ "splits?dataset=nguha/legalbench": {
+  "status": 200,
+  "body": {
+   "splits": [
+    {
+     "dataset": "nguha/legalbench",
+     "config": "abercrombie",
+     "split": "train"
+    },
+    {
+     "dataset": "nguha/legalbench",
+     "config": "abercrombie",
+     "split": "test"
+    },
+    {
+     "dataset": "nguha/legalbench",
+     "config": "contract_nli_explicit_identification",
+     "split": "train"
+    },
+    {
+     "dataset": "nguha/legalbench",
+     "config": "contract_nli_explicit_identification",
+     "split": "test"
+    },
+    {
+     "dataset": "nguha/legalbench",
+     "config": "hearsay",
+     "split": "train"
+    },
+    {
+     "dataset": "nguha/legalbench",
+     "config": "hearsay",
+     "split": "test"
+    }
+   ],
+   "pending": [],
+   "failed": []
+  }
+ },
+ "splits?dataset=AI-team-UoA/greek_legal_code": {
+  "status": 200,
+  "body": {
+   "splits": [
+    {
+     "dataset": "AI-team-UoA/greek_legal_code",
+     "config": "volume",
+     "split": "train"
+    },
+    {
+     "dataset": "AI-team-UoA/greek_legal_code",
+     "config": "volume",
+     "split": "test"
+    },
+    {
+     "dataset": "AI-team-UoA/greek_legal_code",
+     "config": "volume",
+     "split": "validation"
+    },
+    {
+     "dataset": "AI-team-UoA/greek_legal_code",
+     "config": "chapter",
+     "split": "train"
+    },
+    {
+     "dataset": "AI-team-UoA/greek_legal_code",
+     "config": "chapter",
+     "split": "test"
+    },
+    {
+     "dataset": "AI-team-UoA/greek_legal_code",
+     "config": "chapter",
+     "split": "validation"
+    },
+    {
+     "dataset": "AI-team-UoA/greek_legal_code",
+     "config": "subject",
+     "split": "train"
+    },
+    {
+     "dataset": "AI-team-UoA/greek_legal_code",
+     "config": "subject",
+     "split": "test"
+    },
+    {
+     "dataset": "AI-team-UoA/greek_legal_code",
+     "config": "subject",
+     "split": "validation"
+    }
+   ],
+   "pending": [],
+   "failed": []
+  }
+ },
+ "splits?dataset=free-law/Caselaw_Access_Project": {
+  "status": 401,
+  "body": {
+   "error": "The dataset does not exist, or is not accessible without authentication (private or gated). Please check the spelling of the dataset name or retry with authentication."
+  }
+ },
+ "first-rows?dataset=coastalcph/lex_glue&config=ledgar&split=train": {
+  "status": 200,
+  "body": {
+   "dataset": "coastalcph/lex_glue",
+   "config": "ledgar",
+   "split": "train",
+   "features": [
+    {
+     "feature_idx": 0,
+     "name": "text",
+     "type": {
+      "dtype": "string",
+      "_type": "Value"
+     }
+    },
+    {
+     "feature_idx": 1,
+     "name": "label",
+     "type": {
+      "names": [
+       "Adjustments",
+       "Agreements",
+       "Amendments",
+       "Anti-Corruption Laws",
+       "Applicable Laws",
+       "Approvals",
+       "Arbitration",
+       "Assignments",
+       "Assigns",
+       "Authority",
+       "Authorizations",
+       "Base Salary",
+       "Benefits",
+       "Binding Effects",
+       "Books",
+       "Brokers",
+       "Capitalization",
+       "Change In Control",
+       "Closings",
+       "Compliance With Laws",
+       "Confidentiality",
+       "Consent To Jurisdiction",
+       "Consents",
+       "Construction",
+       "Cooperation",
+       "Costs",
+       "Counterparts",
+       "Death",
+       "Defined Terms",
+       "Definitions",
+       "Disability",
+       "Disclosures",
+       "Duties",
+       "Effective Dates",
+       "Effectiveness",
+       "Employment",
+       "Enforceability",
+       "Enforcements",
+       "Entire Agreements",
+       "Erisa",
+       "Existence",
+       "Expenses",
+       "Fees",
+       "Financial Statements",
+       "Forfeitures",
+       "Further Assurances",
+       "General",
+       "Governing Laws",
+       "Headings",
+       "Indemnifications",
+       "Indemnity",
+       "Insurances",
+       "Integration",
+       "Intellectual Property",
+       "Interests",
+       "Interpretations",
+       "Jurisdictions",
+       "Liens",
+       "Litigations",
+       "Miscellaneous",
+       "Modifications",
+       "No Conflicts",
+       "No Defaults",
+       "No Waivers",
+       "Non-Disparagement",
+       "Notices",
+       "Organizations",
+       "Participations",
+       "Payments",
+       "Positions",
+       "Powers",
+       "Publicity",
+       "Qualifications",
+       "Records",
+       "Releases",
+       "Remedies",
+       "Representations",
+       "Sales",
+       "Sanctions",
+       "Severability",
+       "Solvency",
+       "Specific Performance",
+       "Submission To Jurisdiction",
+       "Subsidiaries",
+       "Successors",
+       "Survival",
+       "Tax Withholdings",
+       "Taxes",
+       "Terminations",
+       "Terms",
+       "Titles",
+       "Transactions With Affiliates",
+       "Use Of Proceeds",
+       "Vacations",
+       "Venues",
+       "Vesting",
+       "Waiver Of Jury Trials",
+       "Waivers",
+       "Warranties",
+       "Withholdings"
+      ],
+      "_type": "ClassLabel"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "row_idx": 0,
+     "row": {
+      "text": "Except as otherwise set forth in this Debenture, the Company, for itself and its legal representatives, successors and assigns, expressly waives presentment, protest, demand, notice of dishonor, notice of nonpayment, notice of maturity, notice of protest, presentment for the purpose of accelerating maturity, and diligence in collection.",
+      "label": 97
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 1,
+     "row": {
+      "text": "No ERISA Event has occurred or is reasonably expected to occur that, when taken together with all other such ERISA Events for which liability is reasonably expected to occur, could reasonably be expected to result in a Material Adverse Effect. Neither Borrower nor any ERISA Affiliate maintains or contributes to or has any obligation to maintain or contribute to any Multiemployer Plan or Plan, nor ",
+      "label": 39
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 2,
+     "row": {
+      "text": "This Amendment may be executed by one or more of the parties hereto on any number of separate counterparts, and all of said counterparts taken together shall be deemed to constitute one and the same instrument. This Amendment may be delivered by facsimile or other electronic transmission of the relevant signature pages hereof.",
+      "label": 26
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 3,
+     "row": {
+      "text": "From time to time, as and when required by the Surviving Corporation or by its successors or assigns, there shall be executed and delivered on behalf of Ashford (DE) such deeds and other instruments, and there shall be taken or caused to be taken by it all such further and other action, as shall be appropriate, advisable or necessary in order to vest, perfect or confirm, of record or otherwise, in",
+      "label": 45
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 4,
+     "row": {
+      "text": "Commencing March 7, 2016 and during the Employment Period, the Company shall pay to the Executive a base salary at the rate of no less than $750,000 per calendar year (the “Base Salary”), less applicable deductions, and prorated for any partial month or year, as applicable. The Base Salary shall be reviewed for increase by the Compensation Committees of AFG and AAC (the “Compensation Committees”) ",
+      "label": 11
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 5,
+     "row": {
+      "text": "All notices required or permitted under this Agreement will be in writing, will reference this Agreement, and will be deemed given: (i) when delivered personally; (ii) one (1) business day after deposit with a nationally-recognized express courier, with written confirmation of receipt; or (iii) three (3) business days after having been sent by registered or certified mail, return receipt requested",
+      "label": 65
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 6,
+     "row": {
+      "text": "Each Credit Party shall maintain, in all material respects, proper, complete and consistent books of record with respect to such Person’s operations, affairs, and financial condition. From time to time upon reasonable prior notice, each Credit Party shall permit any Lender, at such reasonable times and intervals and to a reasonable extent and under the reasonable guidance of officers of or employe",
+      "label": 73
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 7,
+     "row": {
+      "text": "BORROWER HEREBY AGREES TO DEFEND, INDEMNIFY AND HOLD HARMLESS INDEMNITEES FOR, FROM AND AGAINST ANY AND ALL LOSSES, DAMAGES, LIABILITIES, CLAIMS, ACTIONS, JUDGMENTS, COURT COSTS AND LEGAL OR OTHER EXPENSES (INCLUDING, WITHOUT LIMITATION, REASONABLE ATTORNEYS' FEES AND EXPENSES) WHICH ANY INDEMNITEE MAY INCUR AS A DIRECT OR INDIRECT CONSEQUENCE OF: (A) THE PURPOSE TO WHICH BORROWER APPLIES THE LOAN",
+      "label": 50
+     },
+     "truncated_cells": []
+    }
+   ],
+   "truncated": true
+  }
+ },
+ "first-rows?dataset=nguha/legalbench&config=hearsay&split=test": {
+  "status": 200,
+  "body": {
+   "dataset": "nguha/legalbench",
+   "config": "hearsay",
+   "split": "test",
+   "features": [
+    {
+     "feature_idx": 0,
+     "name": "index",
+     "type": {
+      "dtype": "int64",
+      "_type": "Value"
+     }
+    },
+    {
+     "feature_idx": 1,
+     "name": "answer",
+     "type": {
+      "dtype": "string",
+      "_type": "Value"
+     }
+    },
+    {
+     "feature_idx": 2,
+     "name": "text",
+     "type": {
+      "dtype": "string",
+      "_type": "Value"
+     }
+    },
+    {
+     "feature_idx": 3,
+     "name": "slice",
+     "type": {
+      "dtype": "string",
+      "_type": "Value"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "row_idx": 0,
+     "row": {
+      "index": 0,
+      "answer": "No",
+      "text": "On the issue of whether James is an smart individual, the fact that James came first in his class in law school.",
+      "slice": "Non-assertive conduct"
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 1,
+     "row": {
+      "index": 1,
+      "answer": "No",
+      "text": "On the issue of whether Robert negligently drove, the fact that Robert fell asleep while driving.",
+      "slice": "Non-assertive conduct"
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 2,
+     "row": {
+      "index": 2,
+      "answer": "No",
+      "text": "On the issue of whether John knew about the conspiracy, the fact that John likes sweatpants.",
+      "slice": "Non-assertive conduct"
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 3,
+     "row": {
+      "index": 3,
+      "answer": "No",
+      "text": "On the issue of whether Michael was guilty of murder, the fact that Michael left the crime scene immediately.",
+      "slice": "Non-assertive conduct"
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 4,
+     "row": {
+      "index": 4,
+      "answer": "No",
+      "text": "On the issue of whether William was loved by his community, the fact that he was selected to speak at his graduation.",
+      "slice": "Non-assertive conduct"
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 5,
+     "row": {
+      "index": 5,
+      "answer": "No",
+      "text": "On the issue of whether Mary robbed the bank, the fact that Mary went to the bank in disguise.",
+      "slice": "Non-assertive conduct"
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 6,
+     "row": {
+      "index": 6,
+      "answer": "No",
+      "text": "On the issue of whether Patricia was a fan of Coldplay, the fact that she had a poster with the lyrics of \"Viva la Vida\" on her bedroom wall.",
+      "slice": "Non-assertive conduct"
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 7,
+     "row": {
+      "index": 7,
+      "answer": "No",
+      "text": "On the issue of whether Jennifer suffered reputational harm from Linda's article, the fact that Linda worked with several different editors to proof read and cross-check her article.",
+      "slice": "Non-assertive conduct"
+     },
+     "truncated_cells": []
+    }
+   ],
+   "truncated": false
+  }
+ },
+ "first-rows?dataset=AI-team-UoA/greek_legal_code&config=volume&split=train": {
+  "status": 200,
+  "body": {
+   "dataset": "AI-team-UoA/greek_legal_code",
+   "config": "volume",
+   "split": "train",
+   "features": [
+    {
+     "feature_idx": 0,
+     "name": "text",
+     "type": {
+      "dtype": "string",
+      "_type": "Value"
+     }
+    },
+    {
+     "feature_idx": 1,
+     "name": "label",
+     "type": {
+      "names": [
+       "ΚΟΙΝΩΝΙΚΗ ΠΡΟΝΟΙΑ",
+       "ΓΕΩΡΓΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΡΑΔΙΟΦΩΝΙΑ ΚΑΙ ΤΥΠΟΣ",
+       "ΒΙΟΜΗΧΑΝΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΥΓΕΙΟΝΟΜΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΠΟΛΕΜΙΚΟ ΝΑΥΤΙΚΟ",
+       "ΤΑΧΥΔΡΟΜΕΙΑ - ΤΗΛΕΠΙΚΟΙΝΩΝΙΕΣ",
+       "ΔΑΣΗ ΚΑΙ ΚΤΗΝΟΤΡΟΦΙΑ",
+       "ΕΛΕΓΚΤΙΚΟ ΣΥΝΕΔΡΙΟ ΚΑΙ ΣΥΝΤΑΞΕΙΣ",
+       "ΠΟΛΕΜΙΚΗ ΑΕΡΟΠΟΡΙΑ",
+       "ΝΟΜΙΚΑ ΠΡΟΣΩΠΑ ΔΗΜΟΣΙΟΥ ΔΙΚΑΙΟΥ",
+       "ΝΟΜΟΘΕΣΙΑ ΑΝΩΝΥΜΩΝ ΕΤΑΙΡΕΙΩΝ ΤΡΑΠΕΖΩΝ ΚΑΙ ΧΡΗΜΑΤΙΣΤΗΡΙΩΝ",
+       "ΠΟΛΙΤΙΚΗ ΑΕΡΟΠΟΡΙΑ",
+       "ΕΜΜΕΣΗ ΦΟΡΟΛΟΓΙΑ",
+       "ΚΟΙΝΩΝΙΚΕΣ ΑΣΦΑΛΙΣΕΙΣ",
+       "ΝΟΜΟΘΕΣΙΑ ΔΗΜΩΝ ΚΑΙ ΚΟΙΝΟΤΗΤΩΝ",
+       "ΝΟΜΟΘΕΣΙΑ ΕΠΙΜΕΛΗΤΗΡΙΩΝ ΣΥΝΕΤΑΙΡΙΣΜΩΝ ΚΑΙ ΣΩΜΑΤΕΙΩΝ",
+       "ΔΗΜΟΣΙΑ ΕΡΓΑ",
+       "ΔΙΟΙΚΗΣΗ ΔΙΚΑΙΟΣΥΝΗΣ",
+       "ΑΣΦΑΛΙΣΤΙΚΑ ΤΑΜΕΙΑ",
+       "ΕΚΚΛΗΣΙΑΣΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΕΚΠΑΙΔΕΥΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΔΗΜΟΣΙΟ ΛΟΓΙΣΤΙΚΟ",
+       "ΤΕΛΩΝΕΙΑΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΣΥΓΚΟΙΝΩΝΙΕΣ",
+       "ΕΘΝΙΚΗ ΑΜΥΝΑ",
+       "ΣΤΡΑΤΟΣ ΞΗΡΑΣ",
+       "ΑΓΟΡΑΝΟΜΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΔΗΜΟΣΙΟΙ ΥΠΑΛΛΗΛΟΙ",
+       "ΠΕΡΙΟΥΣΙΑ ΔΗΜΟΣΙΟΥ ΚΑΙ ΝΟΜΙΣΜΑ",
+       "ΟΙΚΟΝΟΜΙΚΗ ΔΙΟΙΚΗΣΗ",
+       "ΛΙΜΕΝΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΑΣΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΠΟΛΙΤΙΚΗ ΔΙΚΟΝΟΜΙΑ",
+       "ΔΙΠΛΩΜΑΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΔΙΟΙΚΗΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΑΜΕΣΗ ΦΟΡΟΛΟΓΙΑ",
+       "ΤΥΠΟΣ ΚΑΙ ΤΟΥΡΙΣΜΟΣ",
+       "ΕΘΝΙΚΗ ΟΙΚΟΝΟΜΙΑ",
+       "ΑΣΤΥΝΟΜΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΑΓΡΟΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΕΡΓΑΤΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΠΟΙΝΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΕΜΠΟΡΙΚΗ ΝΟΜΟΘΕΣΙΑ",
+       "ΕΠΙΣΤΗΜΕΣ ΚΑΙ ΤΕΧΝΕΣ",
+       "ΕΜΠΟΡΙΚΗ ΝΑΥΤΙΛΙΑ",
+       "ΣΥΝΤΑΓΜΑΤΙΚΗ ΝΟΜΟΘΕΣΙΑ"
+      ],
+      "_type": "ClassLabel"
+     }
+    }
+   ],
+   "rows": [
+    {
+     "row_idx": 0,
+     "row": {
+      "text": "5. ΑΝΑΓΚ. ΝΟΜΟΣ 1204 της 20/29 Απρ. 1938  Περί απαγορεύσεως της χρήσεως των μολυβδούχων χρωμάτων. Άρθρον 1 Απαγορεύεται εις τας εργασίας χρωματισμού η χρήσις μολυβδούχων χρωμάτων περιεχόντων εις αναλογίαν μεγαλειτέραν των δύο επί τοις εκατόν (2%) μεταλλικόν μόλυβδον. Άρθρ.13-19.-(Καταργήθηκαν από την παρ. 3 άρθρ. 17 του Π.Δ. 94/10-22 Απρ. 1987 (ΦΕΚ Α΄ 54), ανωτ. σελ. 306,823). Άρθρον 20 Οι παραβάτ",
+      "label": 41
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 1,
+     "row": {
+      "text": "15. ΝΟΜΟΘΕΤ.ΔΙΑΤΑΓΜΑ υπ’ αριθ.262 της 8/8 Ιουλ.1941 Περί συστάσεως θέσεως Γεν. Επιθεωρητού των εν Πελοποννήσω Νομαρχιών και αναστολής της ισχύος των περί εντοπιότητος διατάξεων.  Προσωρινής ισχύος, ως και τα: α)Ν.Δ.794 της 29 Νοεμ./12 Δεκ.1941 περί συστάσεως εν Βόλω Γεν. Επιθεωρήσεως Νομαρχιών και συμπληρώσεως του άρθρ.86 Α.Ν. 1488/1938.  β)Ν.Δ.1214 της 23 Μαρτ./16 Απρ.1942 περί συμπληρώσεως του υ",
+      "label": 35
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 2,
+     "row": {
+      "text": "29. ΝΟΜΟΘΕΤ. ΔΙΑΤΑΓΜΑ υπ’ αριθ. 1164 της 4 Μαρτ./1 Απρ. 1942 Περί υπαγωγής της Υπηρεσίας Αυτοκινήτων απ’ ευθείας εις την Γενικήν Διεύθυνσιν Τ.Τ.Τ. Αντικατεστάθη δια των διατάξεων του Β.Δ. 870/1960. ",
+      "label": 6
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 3,
+     "row": {
+      "text": "29. ΠΡΟΕΔΡΙΚΟ ΔΙΑΤΑΓΜΑ υπ’ αριθ. 384 της 16/25 Ιουλ. 1985 (ΦΕΚ Α΄ 136) Κανονισμός αμοιβών ιατρικών επισκέψεων και πράξεων. ΄Εχοντες υπόψη: 1.Τις διατάξεις του άρθρ. 29 του Α.Ν. 1565/39 «Περί κώδικος ασκήσεως του ιατρικού επαγγέλματος», καθώς και του άρθρ. 1 του Ν.Δ. 3623/56 «Περί καθορισμού κατωτάτων ορίων ιατρικής αμοιβής κ.λ.π.». 2.Τις διατάξεις του άρθρ. 8 του Π.Δ. 574/82 «Ανακατανομή των αρμοδ",
+      "label": 4
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 4,
+     "row": {
+      "text": "6. ΝΟΜΟΣ υπ’ αριθ. 213 της 13/20 Νοεμ. 1975 (ΦΕΚ Α΄ 258) Περί κυρώσεως της Διεθνούς Συμβάσεως των Παρισίων του 1883 «περί προστασίας της Βιομηχανικής Ιδιοκτησίας», ως αύτη ανεθεωρήθη εν Στοκχόλμη τη 14ην Ιουλ. 1967. Άρθρον πρώτον.-Κυρούται και έχει ισχύν νόμου η υπογραφείσα εν Στοκχόλμη την 14 Ιουλ. 1967 Διεθνής Σύμβασις Παρισίων του έτους 1883 «περί προστασίας της Βιομηχανικής Ιδιοκτησίας», ης το",
+      "label": 43
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 5,
+     "row": {
+      "text": "58. ΠΡΟΕΔΡΙΚΟ ΔΙΑΤΑΓΜΑ υπ’ αριθ. 179 της 28/30 Μαρτ. 1989 (ΦΕΚ Α΄ 88) Διορισμός και τοποθέτηση εκπαιδευτικού προσωπικού της δευτεροβάθμιας εκπαίδευσης. ΄Εχοντας υπόψη: 1.Τις διατάξεις του άρθρ. 15, κεφ. β΄ παρ. 10 και Κεφ. Δ΄ παρ. 5 του Νόμ. 1566/1985 “δομή και λειτουργία της Πρωτοβάθμιας και δευτεροβάθμιας εκπαίδευσης και άλλες διατάξεις ” (ΦΕΚ 167). 2.Τις διατάξεις του άρθρ. 5 παρ. 8 του Νόμ. 18",
+      "label": 21
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 6,
+     "row": {
+      "text": "19. ΝΟΜΟΘΕΤ. ΔΙΑΤΑΓΜΑ υπ’ αριθ. 2528 της 13/22 Αυγ. 1953 (ΦΕΚ Α΄ 222) Περί εισφοράς υπέρ του Ταμείου Ασφαλίσεως Αρτεργατών. ",
+      "label": 19
+     },
+     "truncated_cells": []
+    },
+    {
+     "row_idx": 7,
+     "row": {
+      "text": "41. ΠΡΑΞΗ ΥΠΟΥΡΓΙΚΟΥ ΣΥΜΒΟΥΛΙΟΥ Αριθ. 21 της 15/3/2001 (ΦΕΚ Α΄ 53) Αναπροσαρμογή των τηρουμένων στην Τράπεζα της Ελλάδος σε δραχμές διαθεσίμων του Διεθνούς Νομισματικού Ταμείου (Δ.Ν.Τ.). Σελ. 252,332 Τεύχος     Σελ.      609 40.Β.γ.38-41 Διεθνές Νομισματικό Ταμείο ",
+      "label": 34
+     },
+     "truncated_cells": []
+    }
+   ],
+   "truncated": true
+  }
+ }
+}

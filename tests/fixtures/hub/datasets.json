@@ -1,0 +1,268 @@
+{
+ "AI-team-UoA/greek_legal_code": {
+  "status": 200,
+  "body": {
+   "id": "AI-team-UoA/greek_legal_code",
+   "author": "AI-team-UoA",
+   "sha": "de0fdb34424f07d1ac6f0ede23ee0ed44bd9f5d1",
+   "lastModified": "2024-01-04T12:03:50.000Z",
+   "private": false,
+   "gated": false,
+   "disabled": false,
+   "tags": [
+    "task_categories:text-classification",
+    "task_ids:multi-class-classification",
+    "task_ids:topic-classification",
+    "annotations_creators:found",
+    "language_creators:found",
+    "multilinguality:monolingual",
+    "source_datasets:original",
+    "language:el",
+    "license:cc-by-4.0",
+    "size_categories:100K<n<1M",
+    "format:parquet",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:mlcroissant",
+    "library:polars",
+    "arxiv:2109.15298",
+    "region:us"
+   ],
+   "downloads": 1366,
+   "likes": 17,
+   "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for Greek Legal Code\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nGreek_Legal_Code (GLC) is a dataset consisting of approx. 47k legal resources from Greek legislation. The origin of GLC is “Permanent Greek Legislation Code - Raptarchis”, a collection of Greek legislative documents classified into multi-level (from broader to more specialized) categories.\nTopics\nGLC consists of 47 legislative volumes and each volume corresponds to a main thematic topic. Each volume is divided into… See the full description on the dataset page: https://huggingface.co/datasets/AI-team-UoA/greek_legal_code.",
+   "cardData": {
+    "pretty_name": "Greek Legal Code",
+    "license": [
+     "cc-by-4.0"
+    ],
+    "task_categories": [
+     "text-classification"
+    ]
+   }
+  }
+ },
+ "free-law/Caselaw_Access_Project": {
+  "status": 200,
+  "body": {
+   "id": "free-law/Caselaw_Access_Project",
+   "author": "free-law",
+   "sha": "cee53e98cb2b401865a017ef291a59fbb3407179",
+   "lastModified": "2024-03-16T20:01:40.000Z",
+   "private": false,
+   "gated": "manual",
+   "disabled": false,
+   "tags": [
+    "task_categories:text-generation",
+    "language:en",
+    "license:cc0-1.0",
+    "size_categories:1M<n<10M",
+    "format:parquet",
+    "modality:text",
+    "library:datasets",
+    "library:dask",
+    "library:mlcroissant",
+    "library:polars",
+    "region:us",
+    "legal",
+    "law",
+    "caselaw"
+   ],
+   "downloads": 355,
+   "likes": 104,
+   "description": "\n\n\n\t\n\t\t\n\t\n\t\n\t\tThe Caselaw Access&nbsp;Project\n\t\n\nIn collaboration with Ravel Law, Harvard Law Library digitized over 40 million U.S. court decisions consisting of 6.7 million cases from the last 360 years into a dataset that is widely accessible to use. Access a bulk download of the data through the Caselaw Access Project API (CAPAPI): https://case.law/caselaw/\nFind more information about accessing state and federal written court decisions of common law through the bulk data service… See the full description on the dataset page: https://huggingface.co/datasets/free-law/Caselaw_Access_Project.",
+   "cardData": {
+    "pretty_name": "Caselaw Access Project",
+    "license": "cc0-1.0",
+    "task_categories": [
+     "text-generation"
+    ]
+   }
+  }
+ },
+ "jfrenz/legalglue": {
+  "status": 200,
+  "body": {
+   "id": "jfrenz/legalglue",
+   "author": "jfrenz",
+   "sha": "7019f71cc4cdfe11bf8f52f18375bc1b407313ca",
+   "lastModified": "2022-10-22T22:14:36.000Z",
+   "private": false,
+   "gated": false,
+   "disabled": false,
+   "tags": [
+    "task_categories:text-classification",
+    "task_categories:token-classification",
+    "task_ids:named-entity-recognition",
+    "task_ids:multi-label-classification",
+    "task_ids:topic-classification",
+    "multilinguality:multilingual",
+    "source_datasets:extended",
+    "language:en",
+    "language:da",
+    "language:de",
+    "language:nl",
+    "language:sv",
+    "language:bg",
+    "language:cs",
+    "language:hr",
+    "language:pl",
+    "language:sk",
+    "language:sl",
+    "language:es",
+    "language:fr",
+    "language:it",
+    "language:pt",
+    "language:ro",
+    "language:et",
+    "language:fi",
+    "language:hu",
+    "language:lt",
+    "language:lv",
+    "language:el",
+    "language:mt",
+    "arxiv:2003.13016",
+    "arxiv:2110.00806",
+    "arxiv:2109.00904",
+    "region:us",
+    "german-ler",
+    "lener-br"
+   ],
+   "downloads": 220,
+   "likes": 18,
+   "description": "\\\r\nLegal General Language Understanding Evaluation (LegalGLUE) benchmark is\r\na collection of datasets for evaluating model performance across a diverse set of legal NLP tasks",
+   "cardData": {
+    "pretty_name": "LegalGLUE",
+    "task_categories": [
+     "text-classification",
+     "token-classification"
+    ]
+   }
+  }
+ },
+ "lighteval/lexglue": {
+  "status": 200,
+  "body": {
+   "id": "lighteval/lexglue",
+   "author": "lighteval",
+   "sha": "8cd42981e7b5aad8ae6845567f44c8b24ba0f635",
+   "lastModified": "2025-08-18T13:15:09.000Z",
+   "private": false,
+   "gated": false,
+   "disabled": false,
+   "tags": [
+    "size_categories:100K<n<1M",
+    "format:parquet",
+    "modality:text",
+    "library:datasets",
+    "library:dask",
+    "library:mlcroissant",
+    "library:polars",
+    "region:us"
+   ],
+   "downloads": 151,
+   "likes": 2,
+   "description": "",
+   "cardData": {}
+  }
+ },
+ "nguha/legalbench": {
+  "status": 200,
+  "body": {
+   "id": "nguha/legalbench",
+   "author": "nguha",
+   "sha": "daec8237410aa23e3faf4bc41ad8b3a7e1696826",
+   "lastModified": "2026-03-30T05:17:01.000Z",
+   "private": false,
+   "gated": false,
+   "disabled": false,
+   "tags": [
+    "task_categories:text-classification",
+    "task_categories:question-answering",
+    "language:en",
+    "license:cc-by-4.0",
+    "size_categories:10K<n<100K",
+    "format:csv",
+    "modality:tabular",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:polars",
+    "library:mlcroissant",
+    "arxiv:2308.11462",
+    "arxiv:2110.01799",
+    "arxiv:2103.06268",
+    "arxiv:2301.00876",
+    "arxiv:1911.00841",
+    "arxiv:2105.07903",
+    "region:us",
+    "legal",
+    "law",
+    "benchmark"
+   ],
+   "downloads": 38337,
+   "likes": 200,
+   "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for Dataset Name\n\t\n\n\nHomepage: https://hazyresearch.stanford.edu/legalbench/ \nRepository: https://github.com/HazyResearch/legalbench/ \nPaper: https://arxiv.org/abs/2308.11462\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Description\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nThe LegalBench project is an ongoing open science effort to collaboratively curate tasks for evaluating legal reasoning in English large language models (LLMs). The benchmark currently consists of 162 tasks gathered from 40… See the full description on the dataset page: https://huggingface.co/datasets/nguha/legalbench.",
+   "cardData": {
+    "pretty_name": "LegalBench (Staging)",
+    "license": "cc-by-4.0",
+    "task_categories": [
+     "text-classification",
+     "question-answering"
+    ]
+   }
+  }
+ },
+ "coastalcph/lex_glue": {
+  "status": 200,
+  "body": {
+   "id": "coastalcph/lex_glue",
+   "author": "coastalcph",
+   "sha": "c23fdff1a6bf74e0e1a71cb86f1e781d37da888c",
+   "lastModified": "2024-01-04T14:25:27.000Z",
+   "private": false,
+   "gated": false,
+   "disabled": false,
+   "tags": [
+    "task_categories:question-answering",
+    "task_categories:text-classification",
+    "task_ids:multi-class-classification",
+    "task_ids:multi-label-classification",
+    "task_ids:multiple-choice-qa",
+    "task_ids:topic-classification",
+    "annotations_creators:found",
+    "language_creators:found",
+    "multilinguality:monolingual",
+    "source_datasets:extended",
+    "language:en",
+    "license:cc-by-4.0",
+    "size_categories:100K<n<1M",
+    "format:parquet",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:mlcroissant",
+    "library:polars",
+    "arxiv:2110.00976",
+    "arxiv:2109.00904",
+    "arxiv:1805.01217",
+    "arxiv:2104.08671",
+    "region:us"
+   ],
+   "downloads": 35349,
+   "likes": 85,
+   "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for \"LexGLUE\"\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nInspired by the recent widespread use of the GLUE multi-task benchmark NLP dataset (Wang et al., 2018), the subsequent more difficult SuperGLUE (Wang et al., 2019), other previous multi-task NLP benchmarks (Conneau and Kiela, 2018; McCann et al., 2018), and similar initiatives in other domains (Peng et al., 2019), we introduce the Legal General Language Understanding Evaluation (LexGLUE) benchmark, a benchmark dataset to… See the full description on the dataset page: https://huggingface.co/datasets/coastalcph/lex_glue.",
+   "cardData": {
+    "pretty_name": "LexGLUE",
+    "license": [
+     "cc-by-4.0"
+    ],
+    "task_categories": [
+     "question-answering",
+     "text-classification"
+    ]
+   }
+  }
+ }
+}
