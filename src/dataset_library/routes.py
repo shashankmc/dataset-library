@@ -116,15 +116,17 @@ def labels():
     return jsonify({"labels": {f"huggingface:{external_id}": verdict for external_id, verdict in found.items()}})
 
 
-@library_bp.route("/datasets/huggingface/<path:external_id>", methods=["GET"])
-def dataset(external_id):
+# The parameter is not called `*_id`: hosts may treat such URL parameters as
+# their own database ids (BAIGLE refuses any that is not a UUID).
+@library_bp.route("/datasets/huggingface/<path:dataset_ref>", methods=["GET"])
+def dataset(dataset_ref):
     """One dataset's facts, configs and first rows (`?config=&split=`)."""
-    if not DATASET_ID_PATTERN.match(external_id):
-        raise ApiError(400, f"Not a Hugging Face dataset id: {external_id}", "bad_id")
+    if not DATASET_ID_PATTERN.match(dataset_ref):
+        raise ApiError(400, f"Not a Hugging Face dataset id: {dataset_ref}", "bad_id")
     try:
         return jsonify(
             preview_module.preview(
-                _host(), external_id, request.args.get("config") or None, request.args.get("split") or None
+                _host(), dataset_ref, request.args.get("config") or None, request.args.get("split") or None
             )
         )
     except preview_module.NotInLibrary:
