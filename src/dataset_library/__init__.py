@@ -4,7 +4,7 @@ from typing import Callable, Protocol
 
 from .licenses import License, resolve_license
 
-__version__ = "0.2.0"
+__version__ = "0.2.1"
 
 __all__ = ["Cache", "License", "init_dataset_library", "resolve_license"]
 

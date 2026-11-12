@@ -36,7 +36,7 @@ label `dataset_library`).
   from the dataset viewer's column types; up to 30 ids, cached an hour each.
 - `GET /api/library/datasets/huggingface/<org>/<name>?config=&split=` → the
   card plus `configs`, `config`, `split`, `columns`, the first `rows`, `labels`
-  and `preview: "ok" | "unavailable"`.
+  `rowCount` (the split's size, when known) and `preview: "ok" | "unavailable"`.
 - `GET /api/library/options` → the task, license and source filters, and the
   license table (`level` is this platform's: `allow`, `warn` or `hide`).
 

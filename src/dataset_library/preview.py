@@ -47,7 +47,7 @@ def _build(host, external_id, config, split):
     card = huggingface.dataset(external_id, host.task_types)
     if card is None:
         raise NotInLibrary()
-    body = {**card, "preview": "unavailable", "configs": [], "config": None, "split": None, "columns": [], "rows": []}
+    body = {**card, "preview": "unavailable", "configs": [], "config": None, "split": None, "columns": [], "rows": [], "rowCount": None}
     body["labels"] = labels_module.for_ids(host.cache, [external_id])[external_id]
     try:
         configs = _configs(viewer.get("splits", dataset=external_id))
@@ -65,6 +65,7 @@ def _build(host, external_id, config, split):
         raise UnknownConfig()
     split = split or ("train" if "train" in chosen["splits"] else chosen["splits"][0])
     body.update(configs=configs, config=chosen["name"], split=split)
+    body["rowCount"] = _row_count(external_id, chosen["name"], split)
     try:
         rows = viewer.get("first-rows", dataset=external_id, config=chosen["name"], split=split)
     except viewer.ViewerUnavailable:
@@ -77,6 +78,16 @@ def _build(host, external_id, config, split):
     ]
     body["preview"] = "ok" if body["rows"] else "unavailable"
     return body
+
+
+def _row_count(external_id, config, split):
+    """The split's size from the viewer's /info, or None when it does not say."""
+    try:
+        info = viewer.get("info", dataset=external_id, config=config).get("dataset_info") or {}
+    except viewer.ViewerUnavailable:
+        return None
+    count = ((info.get("splits") or {}).get(split) or {}).get("num_examples")
+    return count if isinstance(count, int) else None
 
 
 def _configs(body):

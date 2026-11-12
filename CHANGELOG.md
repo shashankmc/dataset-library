@@ -8,6 +8,13 @@ While the version is 0.x, minor releases may contain breaking changes.
 
 ## [Unreleased]
 
+## [0.2.1] - 2026-11-12
+
+### Added
+
+- The dataset preview's `rowCount`: the chosen split's size from the viewer's
+  `/info`, or `null` when it does not say.
+
 ## [0.2.0] - 2026-11-12
 
 ### Added

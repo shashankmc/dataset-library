@@ -20,6 +20,7 @@ def test_the_first_config_and_its_train_split_preview_by_default(client):
     assert body["columns"][0]["type"] == "text"
     assert body["columns"][1]["type"] == "class label, 47 classes"
     assert len(body["rows"]) == 8
+    assert body["rowCount"] == 28536  # the train split, from the viewer's /info
     # Class labels arrive as numbers and are shown by name.
     assert all(isinstance(row[1], str) for row in body["rows"])
     assert body["labels"] == "yes"
@@ -49,6 +50,7 @@ def test_a_dataset_the_viewer_cannot_read_still_shows_its_facts(client):
 
     assert body["preview"] == "unavailable"
     assert body["rows"] == [] and body["columns"] == []
+    assert body["rowCount"] is None
     assert body["title"] == "LegalGLUE"
     assert body["tasks"] == ["classification", "ner"]
 
