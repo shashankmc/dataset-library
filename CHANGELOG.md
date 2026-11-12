@@ -15,7 +15,8 @@ While the version is 0.x, minor releases may contain breaking changes.
 - Import a random sample of a Hugging Face dataset as the host's own Dataset
   (BAIGLE #113). `init_dataset_library` takes `enqueue(import_ref)` and
   `max_rows()`; `/options` reports `importable` and `maxRows`.
-  - `POST /api/library/imports`, `GET /api/library/imports[/<ref>]`.
+  - `POST /api/library/imports` (an optional `name`; without one, the title,
+    numbered on a repeat import), `GET /api/library/imports[/<ref>]`.
   - `dataset_library.imports.run_import` for the host's worker: queued →
     fetching → sampling → validating → completed, or failed; the database is the
     source of truth and is checked before every step.
@@ -26,10 +27,11 @@ While the version is 0.x, minor releases may contain breaking changes.
     row groups holding a chosen row. Empty text is dropped; class labels are
     written by name.
   - The Hub revision seen at preview is pinned; a dataset changed since then
-    is not imported.
+    is not imported. An import whose row is erased (account deletion) stops
+    without making a dataset.
   - Table `library_imports` (migration `dl_0002_imports`).
 - Cards carry `revision` (the Hub's commit sha).
-- Optional extra `dataset-library[import]` (pyarrow).
+- Optional extra `dataset-library[import]` (pyarrow, below 26 while hosts keep NumPy 1).
 
 ## [0.3.1] - 2026-11-12
 
