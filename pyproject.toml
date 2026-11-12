@@ -30,8 +30,9 @@ Issues = "https://github.com/shashankmc/dataset-library/issues"
 Changelog = "https://github.com/shashankmc/dataset-library/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
-# Where imports run (the host's worker): reading Parquet shards.
-import = ["pyarrow>=15"]
+# Where imports run (the host's worker): reading Parquet shards. pyarrow 26
+# needs NumPy 2 but does not declare it, and hosts on legal-ml-core keep NumPy 1.
+import = ["pyarrow>=15,<26"]
 test = [
     "dataset-library[import]",
     "pytest>=7.4",
