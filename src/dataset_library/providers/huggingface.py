@@ -120,6 +120,7 @@ def _card(record, task_types):
         "gated": bool(record.get("gated")),
         "description": _description(record.get("description")),
         "updated": (record.get("lastModified") or "")[:10] or None,
+        "revision": record.get("sha"),
         "downloads": record.get("downloads") or 0,
     }
 

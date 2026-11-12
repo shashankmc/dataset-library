@@ -4,7 +4,7 @@ from typing import Callable, Protocol
 
 from .licenses import License, resolve_license
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"
 
 __all__ = ["Cache", "License", "init_dataset_library", "resolve_license"]
 
@@ -26,6 +26,8 @@ class _Host:
     cache: Cache
     is_admin: Callable[[], bool]
     audit: Callable[..., None]
+    enqueue: Callable[[str], None] | None = None
+    max_rows: Callable[[], int] = lambda: 1000
 
 
 def init_dataset_library(
@@ -38,6 +40,8 @@ def init_dataset_library(
     cache,
     is_admin=None,
     audit=None,
+    enqueue=None,
+    max_rows=None,
     url_prefix="/api/library",
 ):
     """Mount the library API on a host Flask app.
@@ -52,6 +56,10 @@ def init_dataset_library(
     ``is_admin()`` says whether the signed-in user may change the library's
     settings (nobody, by default). ``audit(event, **fields)`` records each
     settings change; fields are counts and license ids, never personal data.
+    ``enqueue(import_ref)`` hands a queued import to the host's worker, which
+    calls ``dataset_library.imports.run_import``; without it there is no
+    import. ``max_rows()`` is the most rows a dataset may have (legal-ml-core's
+    LEGAL_ML_MAX_ROWS), read once when an import is queued.
     """
     from .routes import library_bp
 
@@ -63,5 +71,7 @@ def init_dataset_library(
         cache=cache,
         is_admin=is_admin or (lambda: False),
         audit=audit or (lambda event, **fields: None),
+        enqueue=enqueue,
+        max_rows=max_rows or (lambda: 1000),
     )
     app.register_blueprint(library_bp, url_prefix=url_prefix)

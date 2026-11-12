@@ -1,0 +1,128 @@
+{
+ "coastalcph/lex_glue?config=ledgar": {
+  "status": 200,
+  "body": {
+   "parquet_files": [
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ledgar",
+     "split": "test",
+     "url": "https://huggingface.co/datasets/coastalcph/lex_glue/resolve/refs%2Fconvert%2Fparquet/ledgar/test/0000.parquet",
+     "filename": "0000.parquet",
+     "size": 3313508
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ledgar",
+     "split": "train",
+     "url": "https://huggingface.co/datasets/coastalcph/lex_glue/resolve/refs%2Fconvert%2Fparquet/ledgar/train/0000.parquet",
+     "filename": "0000.parquet",
+     "size": 20897973
+    },
+    {
+     "dataset": "coastalcph/lex_glue",
+     "config": "ledgar",
+     "split": "validation",
+     "url": "https://huggingface.co/datasets/coastalcph/lex_glue/resolve/refs%2Fconvert%2Fparquet/ledgar/validation/0000.parquet",
+     "filename": "0000.parquet",
+     "size": 3439104
+    }
+   ],
+   "partial": false
+  }
+ },
+ "isaacus/open-australian-legal-corpus?config=corpus": {
+  "status": 200,
+  "body": {
+   "parquet_files": [
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0000.parquet",
+     "filename": "0000.parquet",
+     "size": 197948891
+    },
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0001.parquet",
+     "filename": "0001.parquet",
+     "size": 228079185
+    },
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0002.parquet",
+     "filename": "0002.parquet",
+     "size": 235771543
+    },
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0003.parquet",
+     "filename": "0003.parquet",
+     "size": 236692430
+    },
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0004.parquet",
+     "filename": "0004.parquet",
+     "size": 236905768
+    },
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0005.parquet",
+     "filename": "0005.parquet",
+     "size": 234895597
+    },
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0006.parquet",
+     "filename": "0006.parquet",
+     "size": 235676146
+    },
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0007.parquet",
+     "filename": "0007.parquet",
+     "size": 235614941
+    },
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0008.parquet",
+     "filename": "0008.parquet",
+     "size": 236120338
+    },
+    {
+     "dataset": "isaacus/open-australian-legal-corpus",
+     "config": "corpus",
+     "split": "corpus",
+     "url": "https://huggingface.co/datasets/isaacus/open-australian-legal-corpus/resolve/refs%2Fconvert%2Fparquet/corpus/partial-corpus/0009.parquet",
+     "filename": "0009.parquet",
+     "size": 229618511
+    }
+   ],
+   "partial": true
+  }
+ },
+ "jfrenz/legalglue?config=default": {
+  "status": 501,
+  "body": {
+   "error": "The dataset viewer doesn't support this dataset because it runs arbitrary python code."
+  }
+ }
+}

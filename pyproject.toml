@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dataset-library"
-version = "0.3.1"
+version = "0.4.0"
 description = "Search public legal datasets by license and task from a Flask app, and import a sample as the host's own Dataset."
 readme = "README.md"
 license = { text = "MIT" }
@@ -30,7 +30,10 @@ Issues = "https://github.com/shashankmc/dataset-library/issues"
 Changelog = "https://github.com/shashankmc/dataset-library/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
+# Where imports run (the host's worker): reading Parquet shards.
+import = ["pyarrow>=15"]
 test = [
+    "dataset-library[import]",
     "pytest>=7.4",
     "Flask-SQLAlchemy>=3.0.5,<4",
     "alembic>=1.13",  # tests/test_migrations.py runs the revisions; hosts supply it at runtime

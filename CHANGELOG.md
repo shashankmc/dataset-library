@@ -8,6 +8,37 @@ While the version is 0.x, minor releases may contain breaking changes.
 
 ## [Unreleased]
 
+## [0.4.0] - 2026-11-12
+
+### Added
+
+- Import a random sample of a Hugging Face dataset as the host's own Dataset
+  (BAIGLE #113). `init_dataset_library` takes `enqueue(import_ref)` and
+  `max_rows()`; `/options` reports `importable` and `maxRows`.
+  - `POST /api/library/imports`, `GET /api/library/imports[/<ref>]`.
+  - `dataset_library.imports.run_import` for the host's worker: queued →
+    fetching → sampling → validating → completed, or failed; the database is the
+    source of truth and is checked before every step.
+  - `dataset_library.providers.parquet.fetch_shards`: the split's converted
+    Parquet shards, downloaded up to a byte cap (200 MB by default), 429/5xx
+    retried three times.
+  - Two-pass sampling: row counts first, then only the mapped columns of the
+    row groups holding a chosen row. Empty text is dropped; class labels are
+    written by name.
+  - The Hub revision seen at preview is pinned; a dataset changed since then
+    is not imported.
+  - Table `library_imports` (migration `dl_0002_imports`).
+- Cards carry `revision` (the Hub's commit sha).
+- Optional extra `dataset-library[import]` (pyarrow).
+
+## [0.3.1] - 2026-11-12
+
+### Fixed
+
+- The preview route's parameter is `dataset_ref`, not `external_id`: BAIGLE
+  refuses any `*_id` URL parameter that is not a UUID, so every preview there
+  answered 404.
+
 ## [0.3.0] - 2026-11-12
 
 ### Added

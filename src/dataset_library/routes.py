@@ -2,6 +2,7 @@
 from flask import Blueprint, current_app, jsonify, request
 
 from . import admin as admin_module
+from . import imports as imports_module
 from . import labels as labels_module
 from . import policy as policy_module
 from . import preview as preview_module
@@ -83,6 +84,8 @@ def options():
             "licenses": licenses,
             "groups": GROUPS,
             "admin": bool(host.is_admin()),
+            "importable": host.enqueue is not None,
+            "maxRows": host.max_rows(),
             "sources": [
                 {"value": s.ref, "label": s.ref, "provider": s.provider}
                 for s in search_module.enabled_sources(host.db)
@@ -176,3 +179,40 @@ def check_source():
     except (ProviderRateLimited, ProviderUnavailable):
         raise ApiError(503, "Hugging Face could not be reached to check that. Try again in a few minutes.", "provider_unavailable")
     return jsonify({"ref": ref, "ok": True} if problem is None else {"ref": ref, "ok": False, "error": problem})
+
+
+def _importing():
+    if _host().enqueue is None:
+        raise ApiError(404, "Importing is not offered here.", "not_found")
+
+
+@library_bp.route("/imports", methods=["POST"])
+def start_import():
+    """Queue an import of a random sample; the worker does the rest."""
+    _importing()
+    try:
+        record = imports_module.start(_host(), _host().current_owner(), request.get_json(silent=True) or {})
+    except imports_module.Refused as refused:
+        raise ApiError(refused.status, refused.message, refused.code)
+    except ProviderRateLimited:
+        raise ApiError(503, "Hugging Face is limiting requests. Try again in a few minutes.", "provider_rate_limited")
+    except ProviderUnavailable:
+        raise ApiError(503, "Hugging Face could not be reached. Try again in a few minutes.", "provider_unavailable")
+    return jsonify(record), 202
+
+
+@library_bp.route("/imports", methods=["GET"])
+def list_imports():
+    """The signed-in user's imports, newest first."""
+    _importing()
+    return jsonify({"imports": imports_module.for_owner(_host(), _host().current_owner())})
+
+
+# Not `<import_id>`: hosts may treat `*_id` URL parameters as their own database ids.
+@library_bp.route("/imports/<import_ref>", methods=["GET"])
+def follow_import(import_ref):
+    _importing()
+    record = imports_module.get(_host(), _host().current_owner(), import_ref)
+    if record is None:
+        raise ApiError(404, "No such import.", "not_found")
+    return jsonify(record)
