@@ -1,0 +1,95 @@
+[
+ {
+  "id": "coastalcph/lex_glue",
+  "author": "coastalcph",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-01-04T14:25:27.000Z",
+  "sha": "c23fdff1a6bf74e0e1a71cb86f1e781d37da888c",
+  "downloads": 35349,
+  "likes": 85,
+  "tags": [
+   "task_categories:question-answering",
+   "task_categories:text-classification",
+   "task_ids:multi-class-classification",
+   "task_ids:multi-label-classification",
+   "task_ids:multiple-choice-qa",
+   "task_ids:topic-classification",
+   "annotations_creators:found",
+   "language_creators:found",
+   "multilinguality:monolingual",
+   "source_datasets:extended",
+   "language:en",
+   "license:cc-by-4.0",
+   "size_categories:100K<n<1M",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "arxiv:2110.00976",
+   "arxiv:2109.00904",
+   "arxiv:1805.01217",
+   "arxiv:2104.08671",
+   "region:us"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for \"LexGLUE\"\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nInspired by the recent widespread use of the GLUE multi-task benchmark NLP dataset (Wang et al., 2018), the subsequent more difficult SuperGLUE (Wang et al., 2019), other previous multi-task NLP benchmarks (Conneau and Kiela, 2018; McCann et al., 2018), and similar initiatives in other domains (Peng et al., 2019), we introduce the Legal General Language Understanding Evaluation (LexGLUE) benchmark, a benchmark dataset to… See the full description on the dataset page: https://huggingface.co/datasets/coastalcph/lex_glue.",
+  "cardData": {
+   "pretty_name": "LexGLUE",
+   "license": [
+    "cc-by-4.0"
+   ],
+   "task_categories": [
+    "question-answering",
+    "text-classification"
+   ]
+  }
+ },
+ {
+  "id": "lighteval/lexglue",
+  "author": "lighteval",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2025-08-18T13:15:09.000Z",
+  "sha": "8cd42981e7b5aad8ae6845567f44c8b24ba0f635",
+  "downloads": 151,
+  "likes": 2,
+  "tags": [
+   "size_categories:100K<n<1M",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:dask",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us"
+  ],
+  "cardData": {}
+ },
+ {
+  "id": "akkasi/lex_glue",
+  "author": "akkasi",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2023-10-27T19:02:17.000Z",
+  "sha": "eba9a79320dfecb237a0d52ff85063faf65b12d4",
+  "downloads": 31,
+  "likes": 0,
+  "tags": [
+   "size_categories:10K<n<100K",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for \"lex_glue\"\n\t\n\nMore Information needed\n",
+  "cardData": {}
+ }
+]

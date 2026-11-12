@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dataset-library"
+version = "0.1.0"
+description = "Search public legal datasets by license and task from a Flask app, and import a sample as the host's own Dataset."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Shashank Chakravarthy" }]
+keywords = ["legal NLP", "datasets", "Hugging Face", "licensing", "education", "Flask"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Framework :: Flask",
+    "Intended Audience :: Education",
+]
+dependencies = [
+    "Flask>=2.3,<4",
+    "SQLAlchemy>=2.0,<3",
+    "requests>=2.31,<3",
+]
+
+[project.urls]
+Homepage = "https://github.com/shashankmc/dataset-library"
+Repository = "https://github.com/shashankmc/dataset-library"
+Issues = "https://github.com/shashankmc/dataset-library/issues"
+Changelog = "https://github.com/shashankmc/dataset-library/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4",
+    "Flask-SQLAlchemy>=3.0.5,<4",
+    "alembic>=1.13",  # tests/test_migrations.py runs the revisions; hosts supply it at runtime
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dataset_library = ["migrations/versions/*.py"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

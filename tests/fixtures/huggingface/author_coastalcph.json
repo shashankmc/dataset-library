@@ -1,0 +1,174 @@
+[
+ {
+  "id": "coastalcph/lex_glue",
+  "author": "coastalcph",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-01-04T14:25:27.000Z",
+  "sha": "c23fdff1a6bf74e0e1a71cb86f1e781d37da888c",
+  "downloads": 35349,
+  "likes": 85,
+  "tags": [
+   "task_categories:question-answering",
+   "task_categories:text-classification",
+   "task_ids:multi-class-classification",
+   "task_ids:multi-label-classification",
+   "task_ids:multiple-choice-qa",
+   "task_ids:topic-classification",
+   "annotations_creators:found",
+   "language_creators:found",
+   "multilinguality:monolingual",
+   "source_datasets:extended",
+   "language:en",
+   "license:cc-by-4.0",
+   "size_categories:100K<n<1M",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "arxiv:2110.00976",
+   "arxiv:2109.00904",
+   "arxiv:1805.01217",
+   "arxiv:2104.08671",
+   "region:us"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for \"LexGLUE\"\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nInspired by the recent widespread use of the GLUE multi-task benchmark NLP dataset (Wang et al., 2018), the subsequent more difficult SuperGLUE (Wang et al., 2019), other previous multi-task NLP benchmarks (Conneau and Kiela, 2018; McCann et al., 2018), and similar initiatives in other domains (Peng et al., 2019), we introduce the Legal General Language Understanding Evaluation (LexGLUE) benchmark, a benchmark dataset to… See the full description on the dataset page: https://huggingface.co/datasets/coastalcph/lex_glue.",
+  "cardData": {
+   "pretty_name": "LexGLUE",
+   "license": [
+    "cc-by-4.0"
+   ],
+   "task_categories": [
+    "question-answering",
+    "text-classification"
+   ]
+  }
+ },
+ {
+  "id": "coastalcph/multi_eurlex",
+  "author": "coastalcph",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2026-10-27T10:15:03.000Z",
+  "sha": "d0318b7f68f43f7d77797437ce172d899254cd0f",
+  "downloads": 2561,
+  "likes": 46,
+  "tags": [
+   "task_categories:text-classification",
+   "task_ids:multi-label-classification",
+   "task_ids:topic-classification",
+   "annotations_creators:found",
+   "language_creators:found",
+   "multilinguality:multilingual",
+   "source_datasets:original",
+   "language:bg",
+   "language:cs",
+   "language:da",
+   "language:de",
+   "language:el",
+   "language:en",
+   "language:es",
+   "language:et",
+   "language:fi",
+   "language:fr",
+   "language:hr",
+   "language:hu",
+   "language:it",
+   "language:lt",
+   "language:lv",
+   "language:mt",
+   "language:nl",
+   "language:pl",
+   "language:pt",
+   "language:ro",
+   "language:sk",
+   "language:sl",
+   "language:sv",
+   "license:cc-by-4.0",
+   "size_categories:10K<n<100K",
+   "arxiv:2109.00904",
+   "region:us"
+  ],
+  "description": "MultiEURLEX comprises 65k EU laws in 23 official EU languages (some low-ish resource).\nEach EU law has been annotated with EUROVOC concepts (labels) by the Publication Office of EU.\nAs with the English EURLEX, the goal is to predict the relevant EUROVOC concepts (labels);\nthis is multi-label classification task (given the text, predict multiple labels).",
+  "cardData": {
+   "pretty_name": "MultiEURLEX",
+   "license": "cc-by-4.0",
+   "task_categories": [
+    "text-classification"
+   ]
+  }
+ },
+ {
+  "id": "coastalcph/tydi_xor_rc",
+  "author": "coastalcph",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2025-10-17T08:01:26.000Z",
+  "sha": "d991050dc758461db19dc918bf7cbdad34f52a7e",
+  "downloads": 2198,
+  "likes": 0,
+  "tags": [
+   "task_categories:question-answering",
+   "task_ids:extractive-qa",
+   "annotations_creators:crowdsourced",
+   "language_creators:crowdsourced",
+   "multilinguality:multilingual",
+   "source_datasets:extended|wikipedia",
+   "language:en",
+   "language:ar",
+   "language:bn",
+   "language:fi",
+   "language:ja",
+   "language:ko",
+   "language:ru",
+   "language:te",
+   "license:mit",
+   "size_categories:10K<n<100K",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for \"tydi_xor_rc\"\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nTyDi QA is a question answering dataset covering 11 typologically diverse languages. \nXORQA is an extension of the original TyDi QA dataset to also include unanswerable questions, where context documents are only in English but questions are in 7 languages.\nXOR-AttriQA contains annotated attribution data for a sample of XORQA.\nThis dataset is a combined and simplified version of the Reading Comprehension data from… See the full description on the dataset page: https://huggingface.co/datasets/coastalcph/tydi_xor_rc.",
+  "cardData": {
+   "pretty_name": "XORQA Reading Comprehension",
+   "license": [
+    "mit"
+   ],
+   "task_categories": [
+    "question-answering"
+   ]
+  }
+ },
+ {
+  "id": "coastalcph/mpararel",
+  "author": "coastalcph",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-03-19T16:27:31.000Z",
+  "sha": "732c2104d7bf8ee5e61aa4013db129e385efa944",
+  "downloads": 383,
+  "likes": 0,
+  "tags": [
+   "size_categories:1M<n<10M",
+   "format:parquet",
+   "modality:tabular",
+   "modality:text",
+   "library:datasets",
+   "library:dask",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us"
+  ],
+  "cardData": {}
+ }
+]

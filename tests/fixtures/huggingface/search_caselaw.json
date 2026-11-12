@@ -1,0 +1,256 @@
+[
+ {
+  "id": "free-law/Caselaw_Access_Project",
+  "author": "free-law",
+  "gated": "manual",
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-03-16T20:01:40.000Z",
+  "sha": "cee53e98cb2b401865a017ef291a59fbb3407179",
+  "downloads": 355,
+  "likes": 104,
+  "tags": [
+   "task_categories:text-generation",
+   "language:en",
+   "license:cc0-1.0",
+   "size_categories:1M<n<10M",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:dask",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us",
+   "legal",
+   "law",
+   "caselaw"
+  ],
+  "description": "\n\n\n\t\n\t\t\n\t\n\t\n\t\tThe Caselaw Access&nbsp;Project\n\t\n\nIn collaboration with Ravel Law, Harvard Law Library digitized over 40 million U.S. court decisions consisting of 6.7 million cases from the last 360 years into a dataset that is widely accessible to use. Access a bulk download of the data through the Caselaw Access Project API (CAPAPI): https://case.law/caselaw/\nFind more information about accessing state and federal written court decisions of common law through the bulk data service… See the full description on the dataset page: https://huggingface.co/datasets/free-law/Caselaw_Access_Project.",
+  "cardData": {
+   "pretty_name": "Caselaw Access Project",
+   "license": "cc0-1.0",
+   "task_categories": [
+    "text-generation"
+   ]
+  }
+ },
+ {
+  "id": "free-law/Caselaw_Access_Project_embeddings",
+  "author": "free-law",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-03-16T21:21:35.000Z",
+  "sha": "5f4a3075e03b2fcd44fc9468fc78d8284312a40f",
+  "downloads": 132,
+  "likes": 10,
+  "tags": [
+   "task_categories:text-generation",
+   "language:en",
+   "license:cc0-1.0",
+   "size_categories:1M<n<10M",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:dask",
+   "library:mlcroissant",
+   "library:polars",
+   "arxiv:2309.07597",
+   "region:us",
+   "legal",
+   "law",
+   "caselaw"
+  ],
+  "description": "\n\n\n\t\n\t\t\n\t\n\t\n\t\tThe Caselaw Access Project\n\t\n\nIn collaboration with Ravel Law, Harvard Law Library digitized over 40 million U.S. court decisions consisting of 6.7 million cases from the last 360 years into a dataset that is widely accessible to use. Access a bulk download of the data through the Caselaw Access Project API (CAPAPI): https://case.law/caselaw/\nFind more information about accessing state and federal written court decisions of common law through the bulk data service documentation… See the full description on the dataset page: https://huggingface.co/datasets/free-law/Caselaw_Access_",
+  "cardData": {
+   "pretty_name": "Caselaw Access Project",
+   "license": "cc0-1.0",
+   "task_categories": [
+    "text-generation"
+   ]
+  }
+ },
+ {
+  "id": "TeraflopAI/Caselaw-Access-Project",
+  "author": "TeraflopAI",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-08-24T04:08:46.000Z",
+  "sha": "a4821d2d29a88d496dfa69f570120f4396bfc593",
+  "downloads": 1058,
+  "likes": 3,
+  "tags": [
+   "size_categories:1M<n<10M",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:dask",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us"
+  ],
+  "cardData": {}
+ },
+ {
+  "id": "docketx/us-caselaw-ga",
+  "author": "docketx",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2026-09-21T04:57:59.000Z",
+  "sha": "846c668789199f622af2fd060894007d64002a6a",
+  "downloads": 50,
+  "likes": 1,
+  "tags": [
+   "task_categories:text-retrieval",
+   "task_categories:text-generation",
+   "language:en",
+   "license:cc0-1.0",
+   "size_categories:100K<n<1M",
+   "format:json",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:polars",
+   "library:mlcroissant",
+   "region:us",
+   "legal",
+   "law",
+   "caselaw",
+   "georgia",
+   "us-law",
+   "state-law",
+   "court-opinions",
+   "public-domain",
+   "rag",
+   "retrieval",
+   "legal-nlp",
+   "legal-research"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tGeorgia Case Law\n\t\n\n\nCode & tools: github.com/docketx — legal-scrambler pseudonymises a case file on your own hardware before a frontier model sees it; claude-for-legal is the Claude Code plugin (docketx-open-law) that loads these datasets and checks citations against them.\n\n\n\t\n\t\t\n\t\n\t\n\t\tSource & credit — Free Law Project / CourtListener\n\t\n\nEvery opinion in this dataset comes from the Free Law Project / CourtListener bulk export of\n2026-06-30 (10,798,347 opinions). CourtListener… See the full description on the dataset page: https://huggingface.co/datasets/docketx/us-caselaw-ga.",
+  "cardData": {
+   "pretty_name": "Georgia Case Law",
+   "license": "cc0-1.0",
+   "task_categories": [
+    "text-retrieval",
+    "text-generation"
+   ]
+  }
+ },
+ {
+  "id": "DanKamNdi/caselaw-v2-small",
+  "author": "DanKamNdi",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2023-12-19T10:11:08.000Z",
+  "sha": "fea3f242e33ea93ef07dced24d96764fdec0a435",
+  "downloads": 131,
+  "likes": 1,
+  "tags": [
+   "size_categories:n<1K",
+   "format:json",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us"
+  ],
+  "cardData": {}
+ },
+ {
+  "id": "DanKamNdi/sheria-caselaw",
+  "author": "DanKamNdi",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-01-12T00:45:34.000Z",
+  "sha": "0cb004c22177dc2cd834fb2e68ce0289e4a280a4",
+  "downloads": 139,
+  "likes": 0,
+  "tags": [
+   "size_categories:10K<n<100K",
+   "format:json",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us"
+  ],
+  "cardData": {}
+ },
+ {
+  "id": "free-law/Arizona_Caselaw_Access_Project",
+  "author": "free-law",
+  "gated": "manual",
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-03-16T20:20:50.000Z",
+  "sha": "0a444f729910b84baf5566eb2dee2aaac68a37dd",
+  "downloads": 16,
+  "likes": 0,
+  "tags": [
+   "task_categories:text-generation",
+   "language:en",
+   "license:cc0-1.0",
+   "size_categories:10K<n<100K",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us",
+   "legal",
+   "law",
+   "caselaw"
+  ],
+  "description": "\n\n\n\t\n\t\t\n\t\n\t\n\t\tThe Caselaw Access Project\n\t\n\nIn collaboration with Ravel Law, Harvard Law Library digitized over 40 million U.S. court decisions consisting of 6.7 million cases from the last 360 years into a dataset that is widely accessible to use. Access a bulk download of the data through the Caselaw Access Project API (CAPAPI): https://case.law/caselaw/\nFind more information about accessing state and federal written court decisions of common law through the bulk data service documentation… See the full description on the dataset page: https://huggingface.co/datasets/free-law/Arizona_Caselaw",
+  "cardData": {
+   "pretty_name": "Caselaw Access Project",
+   "license": "cc0-1.0",
+   "task_categories": [
+    "text-generation"
+   ]
+  }
+ },
+ {
+  "id": "free-law/Nevada_Caselaw_Access_Project",
+  "author": "free-law",
+  "gated": "manual",
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-03-16T21:15:43.000Z",
+  "sha": "ab1c805603ff0eceab0809b8a310b63ee23016d1",
+  "downloads": 25,
+  "likes": 0,
+  "tags": [
+   "task_categories:text-generation",
+   "language:en",
+   "license:cc0-1.0",
+   "size_categories:10K<n<100K",
+   "format:parquet",
+   "modality:tabular",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us",
+   "legal",
+   "law",
+   "caselaw"
+  ],
+  "description": "\n\n\n\t\n\t\t\n\t\n\t\n\t\tThe Caselaw Access Project\n\t\n\nIn collaboration with Ravel Law, Harvard Law Library digitized over 40 million U.S. court decisions consisting of 6.7 million cases from the last 360 years into a dataset that is widely accessible to use. Access a bulk download of the data through the Caselaw Access Project API (CAPAPI): https://case.law/caselaw/\nFind more information about accessing state and federal written court decisions of common law through the bulk data service documentation… See the full description on the dataset page: https://huggingface.co/datasets/free-law/Nevada_Caselaw_",
+  "cardData": {
+   "pretty_name": "Caselaw Access Project",
+   "license": "cc0-1.0",
+   "task_categories": [
+    "text-generation"
+   ]
+  }
+ }
+]

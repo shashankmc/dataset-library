@@ -1,0 +1,217 @@
+[
+ {
+  "id": "dataflare/egypt-legal-corpus",
+  "author": "dataflare",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2026-01-19T17:58:32.000Z",
+  "sha": "4855942706f8b2bea152cbb8db8040fd8da83a14",
+  "downloads": 205,
+  "likes": 5,
+  "tags": [
+   "task_categories:text-generation",
+   "task_categories:question-answering",
+   "task_categories:text-classification",
+   "language:ar",
+   "license:mit",
+   "size_categories:1K<n<10K",
+   "format:parquet",
+   "format:optimized-parquet",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:polars",
+   "library:mlcroissant",
+   "region:us",
+   "legal",
+   "law",
+   "egypt",
+   "egyptian-law",
+   "arabic",
+   "legal-nlp",
+   "egypt-legal-corpus"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tEgyptian Legal Corpus\n\t\n\nA comprehensive collection of Egyptian legal texts, meticulously extracted and tokenized for Natural Language Processing (NLP) applications, legal research, and AI model training. This corpus provides high-quality Arabic legal content with structured metadata for efficient processing.\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Statistics\n\t\n\nThis release provides a foundational legal corpus with strict quality controls:\n\nToken Count: 25M+ tokens (25,054,372 tokens) using… See the full description on the dataset page: https://huggingface.co/datasets/dataflare/egypt-legal-corpus.",
+  "cardData": {
+   "license": "mit",
+   "task_categories": [
+    "text-generation",
+    "question-answering",
+    "text-classification"
+   ]
+  }
+ },
+ {
+  "id": "AI-team-UoA/greek_legal_code",
+  "author": "AI-team-UoA",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2024-01-04T12:03:50.000Z",
+  "sha": "de0fdb34424f07d1ac6f0ede23ee0ed44bd9f5d1",
+  "downloads": 1366,
+  "likes": 17,
+  "tags": [
+   "task_categories:text-classification",
+   "task_ids:multi-class-classification",
+   "task_ids:topic-classification",
+   "annotations_creators:found",
+   "language_creators:found",
+   "multilinguality:monolingual",
+   "source_datasets:original",
+   "language:el",
+   "license:cc-by-4.0",
+   "size_categories:100K<n<1M",
+   "format:parquet",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "arxiv:2109.15298",
+   "region:us"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for Greek Legal Code\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nGreek_Legal_Code (GLC) is a dataset consisting of approx. 47k legal resources from Greek legislation. The origin of GLC is “Permanent Greek Legislation Code - Raptarchis”, a collection of Greek legislative documents classified into multi-level (from broader to more specialized) categories.\nTopics\nGLC consists of 47 legislative volumes and each volume corresponds to a main thematic topic. Each volume is divided into… See the full description on the dataset page: https://huggingface.co/datasets/AI-team-UoA/greek_lega",
+  "cardData": {
+   "pretty_name": "Greek Legal Code",
+   "license": [
+    "cc-by-4.0"
+   ],
+   "task_categories": [
+    "text-classification"
+   ]
+  }
+ },
+ {
+  "id": "jfrenz/legalglue",
+  "author": "jfrenz",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2022-10-22T22:14:36.000Z",
+  "sha": "7019f71cc4cdfe11bf8f52f18375bc1b407313ca",
+  "downloads": 220,
+  "likes": 18,
+  "tags": [
+   "task_categories:text-classification",
+   "task_categories:token-classification",
+   "task_ids:named-entity-recognition",
+   "task_ids:multi-label-classification",
+   "task_ids:topic-classification",
+   "multilinguality:multilingual",
+   "source_datasets:extended",
+   "language:en",
+   "language:da",
+   "language:de",
+   "language:nl",
+   "language:sv",
+   "language:bg",
+   "language:cs",
+   "language:hr",
+   "language:pl",
+   "language:sk",
+   "language:sl",
+   "language:es",
+   "language:fr",
+   "language:it",
+   "language:pt",
+   "language:ro",
+   "language:et",
+   "language:fi",
+   "language:hu",
+   "language:lt",
+   "language:lv",
+   "language:el",
+   "language:mt",
+   "arxiv:2003.13016",
+   "arxiv:2110.00806",
+   "arxiv:2109.00904",
+   "region:us",
+   "german-ler",
+   "lener-br"
+  ],
+  "description": "\\\r\nLegal General Language Understanding Evaluation (LegalGLUE) benchmark is\r\na collection of datasets for evaluating model performance across a diverse set of legal NLP tasks",
+  "cardData": {
+   "pretty_name": "LegalGLUE",
+   "task_categories": [
+    "text-classification",
+    "token-classification"
+   ]
+  }
+ },
+ {
+  "id": "MeilingShi/legal_argument_mining",
+  "author": "MeilingShi",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2023-02-26T11:08:04.000Z",
+  "sha": "cfa72f9ee1131fdf19abdb77520fd2e9c82d744f",
+  "downloads": 29,
+  "likes": 2,
+  "tags": [
+   "task_categories:text-classification",
+   "language:en",
+   "license:apache-2.0",
+   "size_categories:10K<n<100K",
+   "format:csv",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:mlcroissant",
+   "library:polars",
+   "region:us"
+  ],
+  "cardData": {
+   "license": "apache-2.0",
+   "task_categories": [
+    "text-classification"
+   ]
+  }
+ },
+ {
+  "id": "nguha/legalbench",
+  "author": "nguha",
+  "gated": false,
+  "private": false,
+  "disabled": false,
+  "lastModified": "2026-03-30T05:17:01.000Z",
+  "sha": "daec8237410aa23e3faf4bc41ad8b3a7e1696826",
+  "downloads": 38337,
+  "likes": 200,
+  "tags": [
+   "task_categories:text-classification",
+   "task_categories:question-answering",
+   "language:en",
+   "license:cc-by-4.0",
+   "size_categories:10K<n<100K",
+   "format:csv",
+   "modality:tabular",
+   "modality:text",
+   "library:datasets",
+   "library:pandas",
+   "library:polars",
+   "library:mlcroissant",
+   "arxiv:2308.11462",
+   "arxiv:2110.01799",
+   "arxiv:2103.06268",
+   "arxiv:2301.00876",
+   "arxiv:1911.00841",
+   "arxiv:2105.07903",
+   "region:us",
+   "legal",
+   "law",
+   "benchmark"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tDataset Card for Dataset Name\n\t\n\n\nHomepage: https://hazyresearch.stanford.edu/legalbench/ \nRepository: https://github.com/HazyResearch/legalbench/ \nPaper: https://arxiv.org/abs/2308.11462\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Description\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nThe LegalBench project is an ongoing open science effort to collaboratively curate tasks for evaluating legal reasoning in English large language models (LLMs). The benchmark currently consists of 162 tasks gathered from 40… See the full description on the dataset page: https://huggingface.co/datasets/nguha/legalbench.",
+  "cardData": {
+   "pretty_name": "LegalBench (Staging)",
+   "license": "cc-by-4.0",
+   "task_categories": [
+    "text-classification",
+    "question-answering"
+   ]
+  }
+ }
+]
